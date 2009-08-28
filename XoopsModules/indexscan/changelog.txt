@@ -1,0 +1,27 @@
+ *
+ * Index Scan module
+ *
+ * Use this module to scan your web folders for missing index files. If any found
+ * you can create automaticly.
+ *
+ * The module uses a function to scan for files originally found on php.net examples
+ * but modified to suit the needs / standards of xoops 2.3.3 & php5.
+ *
+ * LICENSE
+ *
+ * You may not change or alter any portion of this comment or credits
+ * of supporting developers from this source code or any supporting source code
+ * which is considered copyrighted (c) material of the original comment or credit authors.
+ *
+ * @copyright   The XOOPS Project http://sourceforge.net/projects/xoops/
+ * @license       http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @author       Michael Albertsen (culex) <http://www.culex.dk>
+ * @version      $Id:readme.txt 2009-07-09 17:08 culex $
+ * @since         File available since Release 1.0.0
+ *
+ 
+ Index scan
+ ----------
+ v1.0 Thursdag 9 july 2009 - 17:08 (GMT +1)
+
+- Changed function to create index.html, as it ignored index.php3. Now working
