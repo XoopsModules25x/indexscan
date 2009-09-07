@@ -25,9 +25,13 @@
  v1.0 Thursdag 9 july 2009 - 17:08 (GMT +1)
 
 - Changed function to create index.html, as it ignored index.php3. Now working
-
-
+ 
  V1.0 Saturday 5 September 2009 - 14.00 (gmt +1)
 
 - Added Persian Language to the module // Thanks to Voltan
 - Descided to let the module go official. No errors or conserns has been reported during testing.
+
+
+ V1.0 Saturday 7 September 2009 - 15.55 (gmt +1)
+
+- Added French Language to the module // Thanks to kris_fr
