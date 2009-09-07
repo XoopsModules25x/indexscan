@@ -4,6 +4,7 @@
 
 define("_MI_INDEXSCAN_MAIN","Main");
 define("_MI_INDEXSCAN_SCANNOW","Scan now");
+define("_MI_INDEXSCAN_CREATEINDEX", "Create index files");
 define("_MI_INDEXSCAN_HELP","Help");
 define("_MI_INDEXSCAN_SETTINGS","Settings");
 define("_MI_INDEXSCAN_MODULE_NAME","Indexscan");

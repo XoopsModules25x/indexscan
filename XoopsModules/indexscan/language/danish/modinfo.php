@@ -3,6 +3,7 @@
 
 define("_MI_INDEXSCAN_MAIN","Main");
 define("_MI_INDEXSCAN_SCANNOW","Skan nu");
+define("_MI_INDEXSCAN_CREATEINDEX", "Lav indexfiler");
 define("_MI_INDEXSCAN_HELP","Hjælp");
 define("_MI_INDEXSCAN_SETTINGS","Indstillinger");
 define("_MI_INDEXSCAN_MODULE_NAME","Indexscan");
