@@ -30,6 +30,9 @@
 		if (isset($_GET['op']) && $_GET['op'] == 'CreateNow') {
         $op = 'CreateNow';
         }
+		if (isset($_GET['op']) && $_GET['op'] == 'injectionScan') {
+        $op = 'injectionScan';
+        }
 		if (isset($_GET['op']) && $_GET['op'] == '') {
         $op = '';
         }
@@ -38,6 +41,7 @@ function indexScan_Choice() {
 	echo '<table class="outer" width="100%"><tr>';
 	echo "<td class='even'><center><a href='index.php?op=ScanNow'>"._AM_INDEXSCAN_NOW."</a></center></td>";
 	echo "<td class='even'><center><a href='index.php?op=CreateNow'>"._AM_INDEXSCAN_CREATE."</a></center></td>";
+	echo "<td class='even'><center><a href='index.php?op=injectionScan'>"._AM_INDEXSCAN_INJECTIONSCAN."</a></center></td>";
 	echo "<td class='even'><center><a href='../../system/admin.php?fct=preferences&amp;op=showmod&amp;mod="
 		.$xoopsModule ->getVar('mid')."'>"._AM_INDEXSCAN_CONFIG."</a></center></td>";
 	echo '</tr></table>';
@@ -193,6 +197,95 @@ function xoops_Look4FilesCR ( $RootDirCR, $File2Look4CR, $ReturnFindingsCR = NUL
 				xoops_cp_header();
                 indexScan_Choice();
 				xoops_cp_footer();
-                break;						
-} 
+                break;	
+		
+		case "injectionScan":	
+/* Function to scan your website folders for index.html <iframe> injections
+
+			Thanks to Ghia for recommending this feature.
+
+* @copyright   The XOOPS Project http://sourceforge.net/projects/xoops/
+* @license     http://www.fsf.org/copyleft/gpl.html GNU public license
+* @author      Michael Albertsen (culex) <http://www.culex.dk>
+* @version     $Id:index.php 2009-15-09 21:00 culex $
+* @since       File available since Release 1.0.1
+*/
+		xoops_cp_header();
+		indexScan_Choice();
+//
+//
+//
+
+$path = "../../..";
+$baseDir = basename(dirname($_SERVER['PHP_SELF']));
+$WebPath = 'http://'.$_SERVER['HTTP_HOST'].'/';
+$content_pattern = "iframe";
+
+//echo "";
+echo "<table width='100%' align='center' class='outer'>";
+echo _AM_INDEXSCAN_CHECKFORFILES;
+$dir_handle = @opendir($path) or die("Unable to open $path");
+echo "<br><small>";
+
+indexScan_Scan4ifrm($dir_handle, $path, '');
+echo "</table>";
+	xoops_cp_footer();
+break;	
+}
+
+/*
+* @Descript.   This function scans through the files in your webfolders
+*			   And lists files containing the word iframe.
+* @copyright   The XOOPS Project http://sourceforge.net/projects/xoops/
+* @license     http://www.fsf.org/copyleft/gpl.html GNU public license
+* @author      Michael Albertsen (culex) <http://www.culex.dk>
+* @version     $Id:index.php 2009-15-09 21:00 culex $
+* @since       File available since Release 1.0.1
+*/
+
+function indexScan_Scan4ifrm($dir_handle,$path, $WebPth)
+{
+global $WebPath, $content_pattern;
+while (false !== ($file = readdir($dir_handle)))
+{
+$dir = $path.'/'.$file;
+if(is_dir($dir) && $file != '.' && $file !='..' )
+{
+$handle = @opendir($dir) or die(_AM_INDEXSCAN_UNABLETOREADFILE.$file);
+$WebRef = $file.'/';
+indexScan_Scan4ifrm($handle, $dir, $WebRef);
+}
+elseif($file != '.' && $file !='..')
+{
+if(preg_match('/^index+/',$file))
+{
+$ChcekFlag = FALSE;
+
+$handle = @fopen($dir, "r");
+if ($handle)
+{
+while (!feof($handle))
+{
+$content = fgets($handle);
+if(stristr($content, $content_pattern))
+{
+$test = stristr($content, $content_pattern);
+echo "<tr><td></td></tr><tr><td><span style='float: right; width: 90%; color: red;'><small>".$test."</span></small></td>";
+$ChcekFlag = TRUE;
+}
+}
+}
+fclose($handle);
+if($ChcekFlag)
+{
+echo "<tr><td><small><strong><a href='".$dir."'>".$dir."</a></td><td NOWRAP><span style='background-color: #FF0000'><font color='yellow'> "._AM_INDEXSCAN_INFECTED."</span></strong><br><br></small></td></tr>";
+}
+else
+{
+echo "<tr><td><small><font color='black'>".$dir."</font></td><td></td><td><font color='green'> "._AM_INDEXSCAN_CLEAN."</font><br></small></td></tr>";
+}
+}
+}
+}
+}
 ?>

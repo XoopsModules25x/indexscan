@@ -11,6 +11,13 @@ define("_AM_INDEXSCAN_MAKINGHEADER","Cr&#233;ation des fichiers index.html absen
 define("_AM_INDEXSCAN_CREATED","index.html cr&#233;&#233;");
 define("_AM_INDEXSCAN_CREATEDINDEXFILES","Fichier index cr&#233;&#233;");
 
+// Added in 1.01
+define("_AM_INDEXSCAN_CHECKFORFILES","<tr class='header'><center><h2>Checking files for IFRAME Infection</h2></tr></center><center><small>Not that not all uses of Ifram is injections.<br>Check the code in the files found before you delete.<br><hr></small></center>");
+define("_AM_INDEXSCAN_UNABLETOREADFILE","Unable to open file ");
+define("_AM_INDEXSCAN_INFECTED","!!Word IFRAME found!!");
+define("_AM_INDEXSCAN_CLEAN","OK");
+define("_AM_INDEXSCAN_INJECTIONSCAN","Scan for ifram injections");
+
 /**
  * @translation     AFUX (Association Francophone des Utilisateurs de Xoops) (http://www.afux.org/)
  * @specification   _LANGCODE: fr
