@@ -40,4 +40,11 @@
 
  V1.0 Saturday 12 September 2009 - 10.00 (gmt +1)
  - Added dutch translation thanks to Reintjan
-	
+
+IndexScan version 1.1
+---------------------
+
+V1.1 Wednesday 16 September 2009 - 13:30 (gmt +1)
+
+- Added the ability to scan for use of Ifram in indexfiles // Credit to Ghia for this Idea
+- Added Spanish translation // Thanks to DonCurioso at hispaxoops.com
