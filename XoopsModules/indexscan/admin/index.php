@@ -239,7 +239,7 @@ break;
 * @copyright   The XOOPS Project http://sourceforge.net/projects/xoops/
 * @license     http://www.fsf.org/copyleft/gpl.html GNU public license
 * @author      Michael Albertsen (culex) <http://www.culex.dk>
-* @version     $Id:index.php 2009-15-09 21:00 culex $
+* @version     $Id:index.php 2009-17-09 21:00 culex $
 * @since       File available since Release 1.0.1
 */
 
@@ -257,7 +257,7 @@ indexScan_Scan4ifrm($handle, $dir, $WebRef);
 }
 elseif($file != '.' && $file !='..')
 {
-if(preg_match('/^index+/',$file))
+if(preg_match('/^index+/',$file) OR preg_match('/^mainfile+/',$file) OR preg_match('/^header+/',$file) OR preg_match('/^footer+/',$file))
 {
 $ChcekFlag = FALSE;
 
