@@ -18,11 +18,11 @@
  * @license       http://www.fsf.org/copyleft/gpl.html GNU public license
  * @author       Michael Albertsen (culex) <http://www.culex.dk>
  * @version      $Id:xoops_version.php 2009-07-09 11:45 culex $
- * @since         File available since Release 1.0.0
+ * @since         File available since Release 1.0.1
  */
  
 $modversion['name'] =_MI_INDEXSCAN_MODULE_NAME;
-$modversion['version'] = 1.00;
+$modversion['version'] = 1.01;
 $modversion['description'] = _MI_INDEXSCAN_MODULE_DESC;
 $modversion['credits'] = "Developped by Culex http://www.culex.dk";
 $modversion['author'] = "Culex";
