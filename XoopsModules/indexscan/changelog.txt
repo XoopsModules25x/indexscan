@@ -52,3 +52,7 @@ V1.1 Wednesday 16 September 2009 - 13:30 (gmt +1)
 v1.1 thursday 17 september 2009 - 21:00 (gmt +1)
 
 - Indexscan included words with (header, mainfile and footer) in the iframe injection scan.
+
+v1.1 Friday 02 October 2009 - 21:30 (gmt +1)
+- Changed xoops_version.php to show the correct release number 1.1 (thanks to Burning)
+- Added a new and very cool logo for indexscan (million thanks again to Burning)
