@@ -17,4 +17,9 @@ define("_AM_INDEXSCAN_UNABLETOREADFILE","Unable to open file ");
 define("_AM_INDEXSCAN_INFECTED","!!Word IFRAME found!!");
 define("_AM_INDEXSCAN_CLEAN","OK");
 define("_AM_INDEXSCAN_INJECTIONSCAN","Scan for ifram injections");
+
+//added in 2.00
+define("_AM_INDEXSCAN_SCANNING4MISS","<br>Looking for missin index files.<br>Please wait.");
+define("_AM_INDEXSCAN_CREATINGMISS","<br>Creating missing index files.<br>Please wait.");
+define("_AM_INDEXSCAN_SCANNING4IFRAME","<br>Looking for iframes and encoded javascript.<br>Please wait.");
 ?>

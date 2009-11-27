@@ -16,4 +16,5 @@ define("_MI_INDEXSCAN_EXEP3","Mappe Der ikke skal skannes 03");
 define("_MI_INDEXSCAN_EXEP3_DESC","");
 define("_MI_INDEXSCAN_EXEP4","Mappe Der ikke skal skannes 04");
 define("_MI_INDEXSCAN_EXEP4_DESC","");
+
 ?>

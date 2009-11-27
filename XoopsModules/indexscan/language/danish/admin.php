@@ -18,4 +18,10 @@ define("_AM_INDEXSCAN_UNABLETOREADFILE","Kan ikke åbne fil: ");
 define("_AM_INDEXSCAN_INFECTED","!!Iframe fundet!!");
 define("_AM_INDEXSCAN_CLEAN","OK");
 define("_AM_INDEXSCAN_INJECTIONSCAN","Skan for iframe injection");
+
+//added in 2.00
+define("_AM_INDEXSCAN_SCANNING4MISS","<br>Skanner for manglende Indexfiler.<br>Vent venligst.");
+define("_AM_INDEXSCAN_CREATINGMISS","<br>Opretter manglende indexfiler.<br>Vent venligst.");
+define("_AM_INDEXSCAN_SCANNING4IFRAME","<br>Skanner filer for iframe og javascript hijacking.");
+
 ?>

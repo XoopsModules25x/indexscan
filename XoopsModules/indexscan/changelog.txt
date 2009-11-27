@@ -56,3 +56,27 @@ v1.1 thursday 17 september 2009 - 21:00 (gmt +1)
 v1.1 Friday 02 October 2009 - 21:30 (gmt +1)
 - Changed xoops_version.php to show the correct release number 1.1 (thanks to Burning)
 - Added a new and very cool logo for indexscan (million thanks again to Burning)
+
+IndexScan version 2.0
+---------------------
+
+v2.0 friday 27 november 2009 - 13:28 (gmt +1)
+
+- Added searchword "fromCharCode" to search word in iframe scan, to look for encoded javascript includes
+- Spiced the scanning up with some highlighting javascript + some jquery for the scan and messages with lazy load
+- Excluded the modules/indexscan from the iframe scan. The description and functions contain multible iframe-words and thus always gets caught in the scan.
+- new translations definitions in  admin.php are
+
+// Added in 1.01
+define("_AM_INDEXSCAN_CHECKFORFILES","<tr class='header'><center><h2>Checking files for IFRAME Infection</h2></tr></center><center><small>Not that not all uses of Ifram is injections.<br>Check the code in the files found before you delete.<br><hr></small></center>");
+define("_AM_INDEXSCAN_UNABLETOREADFILE","Unable to open file ");
+define("_AM_INDEXSCAN_INFECTED","!!Word IFRAME found!!");
+define("_AM_INDEXSCAN_CLEAN","OK");
+define("_AM_INDEXSCAN_INJECTIONSCAN","Scan for ifram injections");
+
+//added in 2.00
+define("_AM_INDEXSCAN_SCANNING4MISS","<br>Looking for missin index files.<br>Please wait.");
+define("_AM_INDEXSCAN_CREATINGMISS","<br>Creating missing index files.<br>Please wait.");
+define("_AM_INDEXSCAN_SCANNING4IFRAME","<br>Looking for iframes and encoded javascript.<br>Please wait.");
+
+	Default english translations have been added in all language files. Feel free to send me in your language so I can change to correct language.

@@ -42,5 +42,4 @@
 	else {
 	include("../language/english/admin.php");
 	}
-	
 ?>
