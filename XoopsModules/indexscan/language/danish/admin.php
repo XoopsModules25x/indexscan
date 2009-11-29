@@ -23,5 +23,6 @@ define("_AM_INDEXSCAN_INJECTIONSCAN","Skan for iframe injection");
 define("_AM_INDEXSCAN_SCANNING4MISS","<br>Skanner for manglende Indexfiler.<br>Vent venligst.");
 define("_AM_INDEXSCAN_CREATINGMISS","<br>Opretter manglende indexfiler.<br>Vent venligst.");
 define("_AM_INDEXSCAN_SCANNING4IFRAME","<br>Skanner filer for iframe og javascript hijacking.");
+define("_AM_INDEXSCAN_FINISDINJECTIONS"," filer indeholder ordene *iframe* eller *fromCharCode* som kan indikere iframe insert eller kodet javascript insert.<br> Check for at se indholdet af de fundne filer ved at klikke på den røde bar, før du handler yderliger med disse filer.<br><br> Filer der blev skannet ialt: ");
 
 ?>

@@ -30,25 +30,23 @@
 					height:100px;
 					padding:20px;
 					margin-top:10px;
+					font-size: 18 px;
 				}
 				#slidingDiv2 {
 					display: none;
 					height:100px;
 					padding:20px;
 					margin-top:10px;
+					font-size: 18 px;
 				}
 				#slidingDiv3 {
 					display: none;
 					height:100px;
 					padding:20px;
 					margin-top:10px;
+					font-size: 18 px;
 				}
 				
-				#iframetext {
-				display: none;
-				height:25px;
-				}
-
 				p {
 				padding: 0 0 1em;
 				}
@@ -56,65 +54,75 @@
 				.indexscan_msg_list {
 				margin: 0px;
 				padding: 0px;
+				font-size: 10px;
 				}
 				
 				.indexscan_msg_head {
 				padding: 5px 10px;
 				cursor: pointer;
-				position: relative;
 				background-color:#FFCCCC;
 				margin:1px;
-				width:95%;
+				font-size: 10px;
 				}
 				
 				.indexscan_msg_body {
 				padding: 5px 10px 15px;
 				background-color:#F4F4F8;
-				}
-				
-				.indexscan_iframe {
-				float: right;
-				width: 70%;
-				color: red;
-				}
-
-				.indexscan_iframe_found {
-				background-color:#FF0000;
-				color:yellow;
-				position:absolute;
-				left:92%;
-				}
-				
-				.indexscan_index_notfound {
-				position:absolute;
-				left:90%;
-				color:red;
 				font-size: 10px;
 				}
 				
-				.indexscan_created_ok {
-				position:absolute;
-				left:90%;
-				color:green;
+				.indexscan_index_notfound {
+				position:relative;
+				top:5px;
+				float:right;
+				color:red;
 				font-size: 10px;
 				}
 				
 				.indexscan_path {
 				position:relative;
+				top:5px;
 				color:black;
 				font-size: 10px;
-				margin:5px;
+				}
+				
+				.indexscan_created_ok {
+				position:relative;
+				top: 5px;
+				float:right;
+				color:green;
+				font-size: 10px;
+				}			
+				
+				.indexscan_iframe_found {
+				text-align:left;
+				}		
+
+				.indexscan_iframe_found2 {
+				position:absolute;
+				left:85%;
 				}
 				
 				.indexscan_ok {
-				width: 90%;
+				position:relative;
+				text-align:left;
 				color: green;
-				}
+				font-size: 10px;
+				}				
 
+				.indexscan_img
+				{
+				width:12px;
+				height:12px;
+				border:0;
+				margin:0 10px; 
+				float:inherit;
+				}				
+				
 				.indexscan_show {
 				position:absolute;
-				left:90%;
-				}
+				left:95%;
+				}			
 		
 				</style>';
 		
@@ -142,9 +150,9 @@ function indexScan_Choice() {
 	echo "<td class='even'><center><a href='../../system/admin.php?fct=preferences&amp;op=showmod&amp;mod="
 		.$xoopsModule ->getVar('mid')."'>"._AM_INDEXSCAN_CONFIG."</a></center></td>";
 	echo '</tr></table>';
-	echo '<div align="center" id="slidingDiv"><img src="loadingwheel.gif" align="center"><br>'._AM_INDEXSCAN_SCANNING4MISS.'</div>';
-	echo '<div align="center" id="slidingDiv2"><img src="loadingwheel.gif" align="center"><br>'._AM_INDEXSCAN_CREATINGMISS.'</div>';
-	echo '<div align="center" id="slidingDiv3"><img src="loadingwheel.gif" align="center"><br>'._AM_INDEXSCAN_SCANNING4IFRAME.'</div>';
+	echo '<div align="center" id="slidingDiv"><img src="spinner.gif" align="center"><br>'._AM_INDEXSCAN_SCANNING4MISS.'</div>';
+	echo '<div align="center" id="slidingDiv2"><img src="spinner.gif" align="center"><br>'._AM_INDEXSCAN_CREATINGMISS.'</div>';
+	echo '<div align="center" id="slidingDiv3"><img src="spinner.gif" align="center"><br>'._AM_INDEXSCAN_SCANNING4IFRAME.'</div>';
 	}
 		
 // Switch for choises
@@ -154,8 +162,9 @@ switch($op) {
 		global $count;
 		xoops_cp_header();
 		indexScan_Choice();
-		print "<div align = 'center' id ='indexscan_result'><br><table align='center' width='95%'";
+		print "<div align = 'center' id ='indexscan_result' width='100%'><table class='outer' width='100%'>";
 		print "<tr class='header'><center><th colspan=2><h2>"._AM_INDEXSCAN_HEADER."</h2></center></th></tr>";
+		print "<tr><center><td></center></td></tr>";
 
 /* 
 Print the dir found via xoops_look4Files and show where the index.html is not found,
@@ -163,7 +172,7 @@ Print the dir found via xoops_look4Files and show where the index.html is not fo
 function xoops_PrintPaths ( $xoopsFilePath,$File2Look4,$count ) {
 	$xoopsFilePath = substr($xoopsFilePath,7);
 	print "<tr><td><span class='indexscan_path'>$xoopsFilePath</span></td><td><span class='indexscan_index_notfound'>".
-	_AM_INDEXSCAN_NOTFOUND."<span><br></td></tr>";
+	_AM_INDEXSCAN_NOTFOUND."</span></td></tr>";
 }
 
 // Setting up the search //		
@@ -215,6 +224,7 @@ function xoops_Look4Files ( $RootDir, $File2Look4, $ReturnFindings = NULL, $Dirs
 			}
 // $Dirs2Exclude = array( 'modules', './', 'themes' );
 	print xoops_Look4Files ( $RootDir, $File2Look4, $ReturnFindings, $Dirs2Exclude );
+	print "<tr><td colspan=2></td></tr><tr><td colspan=2><center></center></td></tr><tr><td colspan=2></td></tr>";
 	print "<tr><td colspan=2></td></tr><tr><th colspan=2><center>$count "._AM_INDEXSCAN_FOUNDMISSING."</center></th></tr><tr><td colspan=2></td></tr>";
 	print "</table></div>";
 	xoops_cp_footer();
@@ -223,13 +233,14 @@ case "CreateNow":
 		global $count,$myts;
  		xoops_cp_header();
 		indexScan_Choice();
-			print "<br><div id='indexscan_result1><table align='center'";
+			print "<div align = 'center' id ='indexscan_result' width='100%'><table class='outer' width='100%'>";
 			print "<tr class='header'><center><th colspan=2><h2>"._AM_INDEXSCAN_MAKINGHEADER."</h2></center></th></tr>";
+			print "<tr class='header'><center><td colspan=2></center></td></tr>";
 	function xoops_PrintPathsCR ( $xoopsFilePathCR,$File2Look4CR,$countCR ) {
 	$xoopsFilePathCRSHORT = substr($xoopsFilePathCR,7);
 	xoops_CreateMissingIndexFiles ($xoopsFilePathCR);
 	print "<tr><td><span class='indexscan_path'>$xoopsFilePathCRSHORT</span></td><td><span class='indexscan_created_ok'>".
-	_AM_INDEXSCAN_CREATED."</span><br></td></tr>";
+	_AM_INDEXSCAN_CREATED."</span><br><td></tr>";
 }
 
 // Setting up the search //		
@@ -288,7 +299,8 @@ function xoops_Look4FilesCR ( $RootDirCR, $File2Look4CR, $ReturnFindingsCR = NUL
 			}
 // $Dirs2Exclude = array( 'modules', './', 'themes' );
 	print xoops_Look4FilesCR ( $RootDirCR, $File2Look4CR, $ReturnFindingsCR, $Dirs2ExcludeCR );
-	print "<tr><td colspan=2></td></tr><tr class='header'><th colspan=2><center>$countCR "._AM_INDEXSCAN_CREATEDINDEXFILES."</center></th></tr><tr><td colspan=2></td></tr>";
+	print "<tr><td colspan=2></td></tr><tr><td colspan=2><center></center></td></tr><tr><td colspan=2></td></tr>";
+	print "<tr><td colspan=2></td></tr><tr><th colspan=2><center>$countCR "._AM_INDEXSCAN_CREATEDINDEXFILES."</center></th></tr><tr><td colspan=2></td></tr>";
 	print "</table></div>";
 	
 		xoops_cp_footer();		
@@ -312,18 +324,21 @@ function xoops_Look4FilesCR ( $RootDirCR, $File2Look4CR, $ReturnFindingsCR = NUL
 */
 		xoops_cp_header();
 		indexScan_Choice();
-//
-//
-//
+		print "<div id ='indexscan_result' width='100%'><table class='outer' width='100%'>";
 
-			$path = "../../..";
+		$path = "../../..";
 			$baseDir = basename(dirname($_SERVER['PHP_SELF']));
 			$WebPth = 'http://'.$_SERVER['HTTP_HOST'].'/';
 			$content_pattern = array("iframe","fromCharCode");
 			$content_pattern_exclude = array($path."/modules/indexscan");
+			$count_files = 0;
+			$count_injections = 0;
 				echo _AM_INDEXSCAN_CHECKFORFILES;
 			$dir_handle = @opendir($path) or die("Unable to open $path");
 				indexScan_Scan4ifrm($dir_handle, $path, '');
+						print "<tr><td colspan=2></td></tr><tr><td colspan=2><center></center></td></tr><tr><td colspan=2></td></tr>";
+	print "<tr><td colspan=2></td></tr><tr><th colspan=2><span style='position:relative;text-align:left;font-size:14px;font-weight:bold;'>$count_injections</span><span style = 'position:relative;text-align:left;font-size:10px;'>"._AM_INDEXSCAN_FINISDINJECTIONS."</span><span style='font-size:14px;font-weight:bold;'> $count_files</span></th></tr><tr><td colspan=2></td></tr>";
+	echo "</table></div>";
 	xoops_cp_footer();
 break;	
 }
@@ -340,12 +355,12 @@ break;
 
 function indexScan_Scan4ifrm($dir_handle,$path, $WebPth)
 {
-	global $WebPath, $content_pattern,$content_pattern_exclude;
+	global $WebPath, $content_pattern,$content_pattern_exclude,$count_files,$count_injections;
 		while (false !== ($file = readdir($dir_handle)))
 		{
 		$dir = $path.'/'.$file;
 			if(is_dir($dir) && $file != '.' && $file !='..' )
-			{
+			{	
 				$handle = @opendir($dir) or die(_AM_INDEXSCAN_UNABLETOREADFILE.$file);
 				$WebRef = $file.'/';
 					if ( !in_array( $dir, $content_pattern_exclude ) ) {
@@ -357,6 +372,7 @@ function indexScan_Scan4ifrm($dir_handle,$path, $WebPth)
 	{
 		if(preg_match('/^index+/',$file) OR preg_match('/^mainfile+/',$file) OR preg_match('/^header+/',$file) OR preg_match('/^footer+/',$file))
 		{
+		$count_files++;
 		$ChcekFlag = FALSE;
 		$handle = @fopen($dir, "r");
 			if ($handle)
@@ -369,6 +385,8 @@ function indexScan_Scan4ifrm($dir_handle,$path, $WebPth)
 					{
 						if (stristr($content, $value))
 						{
+						$count_injections++;
+						$count_files++;
 						$ChcekFlag = TRUE;
 						rewind($handle);
 						$test ='';
@@ -384,7 +402,7 @@ function indexScan_Scan4ifrm($dir_handle,$path, $WebPth)
 	if($ChcekFlag)
 	{
 	echo "<div class='indexscan_msg_list'>";
-		echo "<div class='indexscan_msg_head'>".$dir."<span class='indexscan_iframe_found'>"._AM_INDEXSCAN_INFECTED."</span></div>";	
+		echo "<div class='indexscan_msg_head'>".$dir."<img class='indexscan_img' src='html.png'></img><span class='indexscan_iframe_found2'>"._AM_INDEXSCAN_INFECTED."</span></div>";	
 		echo "<p class='indexscan_msg_body'>";
 		echo "<span class='.indexscan_codetext'><textarea rows='30' cols='40' name='code' class='php:nocontrols'>".htmlentities($test)."</textarea>";
 	echo "</span></p>"."</div>";
