@@ -12,9 +12,11 @@ define("_AM_INDEXSCAN_CREATED","index.html cr&#233;&#233;");
 define("_AM_INDEXSCAN_CREATEDINDEXFILES","Fichier index cr&#233;&#233;");
 
 // Added in 1.01
+
 define("_AM_INDEXSCAN_CHECKFORFILES","<tr class='header txtcenter'><h2>Recherche de fichiers avec injection d&#39;IFRAME</h2><p class='txtcenter'>Bien que toutes les utilisations d&#39;frame ne consiste pas en injections.<br />V&#233;rifiez le code dans les fichiers trouv&#233;s avant de les supprimer.</p></tr><hr>");
 define("_AM_INDEXSCAN_UNABLETOREADFILE","Impossible d&#39;ouvrir le fichier");
-define("_AM_INDEXSCAN_INFECTED","!! Mot IFRAME non trouv&#233; !!");
+define("_AM_INDEXSCAN_INFECTED"," trouv&#233; !!"); // edit culex 1/12/09
+
 define("_AM_INDEXSCAN_CLEAN","OK");
 define("_AM_INDEXSCAN_INJECTIONSCAN","Scanner des infections d&#39;iframe");
 

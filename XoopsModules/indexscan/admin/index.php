@@ -332,7 +332,7 @@ function xoops_Look4FilesCR ( $RootDirCR, $File2Look4CR, $ReturnFindingsCR = NUL
 		$path = "../../..";
 			$baseDir = basename(dirname($_SERVER['PHP_SELF']));
 			$WebPth = 'http://'.$_SERVER['HTTP_HOST'].'/';
-			$content_pattern = array("iframe","fromCharCode");
+			$content_pattern = array("iframe","fromCharCode","%69%66%72%61%6D%65","document.write(unescape(");
 			$content_pattern_exclude = array($path."/modules/indexscan");
 			$count_files = 0;
 			$count_injections = 0;
@@ -384,10 +384,23 @@ function indexScan_Scan4ifrm($dir_handle,$path, $WebPth)
 				while (!feof($handle))
 				{
 				$content = fgets($handle);
+				$indexscan_type ='';
 					foreach($content_pattern as $key => $value)
 					{
 						if (stristr($content, $value))
 						{
+						if ($value == 'iframe') {
+						$indexscan_type = 'Iframe';
+						}
+						if ($value == 'fromCharCode') {
+						$indexscan_type = 'Encoded Javascript';
+						}
+						if ($value == '%69%66%72%61%6D%65') {
+						$indexscan_type = 'Encoded Javascript';
+						}
+						if ($value == 'document.write(unescape(') {
+						$indexscan_type = 'Encoded Javascript';
+						}						
 						$count_injections++;
 						$count_files++;
 						$ChcekFlag = TRUE;
@@ -405,7 +418,7 @@ function indexScan_Scan4ifrm($dir_handle,$path, $WebPth)
 	if($ChcekFlag)
 	{
 	echo "<div class='indexscan_msg_list'>";
-		echo "<div class='indexscan_msg_head'>".$dir."<img class='indexscan_img' src='html.png'></img><span class='indexscan_iframe_found2'>"._AM_INDEXSCAN_INFECTED."</span></div>";	
+		echo "<div class='indexscan_msg_head'>".$dir."<img class='indexscan_img' src='html.png'></img><span class='indexscan_iframe_found2'>".$indexscan_type._AM_INDEXSCAN_INFECTED."</span></div>";	
 		echo "<p class='indexscan_msg_body'>";
 		echo "<span class='.indexscan_codetext'><textarea rows='30' cols='40' name='code' class='php:nocontrols'>".htmlentities($test)."</textarea>";
 	echo "</span></p>"."</div>";

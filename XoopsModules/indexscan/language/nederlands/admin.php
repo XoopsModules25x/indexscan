@@ -14,7 +14,7 @@ define("_AM_INDEXSCAN_CREATEDINDEXFILES","index bestand aangemaakt");
 // Added in 1.01
 define("_AM_INDEXSCAN_CHECKFORFILES","<tr class='header txtcenter'><h2>Checking files for IFRAME Infection</h2><p class='txtcenter'>Not that not all uses of Ifram is injections.<br />Check the code in the files found before you delete.</p></tr><hr>");
 define("_AM_INDEXSCAN_UNABLETOREADFILE","Unable to open file ");
-define("_AM_INDEXSCAN_INFECTED","!!Word IFRAME found!!");
+define("_AM_INDEXSCAN_INFECTED"," found!!");
 define("_AM_INDEXSCAN_CLEAN","OK");
 define("_AM_INDEXSCAN_INJECTIONSCAN","Scan for ifram injections");
 

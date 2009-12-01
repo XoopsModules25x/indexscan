@@ -14,7 +14,7 @@ define("_AM_INDEXSCAN_CREATEDINDEXFILES","Creado el generador de archivos index.
 // Added in 1.01
 define("_AM_INDEXSCAN_CHECKFORFILES","<tr class='header txtcenter'><h2>Chequear archivos con posible inyección de IFRAME</h2><p class='txtcenter'>No todos usan inyección de IFRAME.<br />Chequea el código en los archivos antes de que los borres.</p></tr><hr>");
 define("_AM_INDEXSCAN_UNABLETOREADFILE","No se puede abrir el archivo ");
-define("_AM_INDEXSCAN_INFECTED","!!Palabra en IFRAME encontrada!!");
+define("_AM_INDEXSCAN_INFECTED"," encontrada!!");
 define("_AM_INDEXSCAN_CLEAN","OK");
 define("_AM_INDEXSCAN_INJECTIONSCAN","Escanear inyecciones de IFRAME");
 
