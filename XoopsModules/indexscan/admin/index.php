@@ -22,7 +22,6 @@
  */
         include_once 'admin_header.php';
 		include XOOPS_ROOT_PATH.'/include/xoopscodes.php';	
-		include XOOPS_ROOT_PATH.'/modules/indexscan/admin/md5parser.php';	
 		echo '<script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>';
 		
 		echo '<style>
@@ -123,20 +122,10 @@
 				.indexscan_show {
 				position:absolute;
 				left:95%;
-				}	
-
-				#indexscan_verifyMsg {
-				height:100px;
-				padding:20px;
-				margin-top:10px;
-				border-color: red;
-				border-style: solid;
-				border-size:1px;
-				font-family: arial; 
-				font-size: 10px;
-				}	
+				}			
 		
-				</style>';	
+				</style>';
+		
 		$op='';
 		
 		if (isset($_GET['op']) && $_GET['op'] == 'ScanNow') {
@@ -152,9 +141,8 @@
 		
         $op = '';
         }
-		
-	function indexScan_Choice() {
-	global $xoopsModule,$count,$verifyMessage;
+function indexScan_Choice() {
+	global $xoopsModule,$count;
 	echo '<table class="outer" width="100%"><tr>';
 	echo "<td class='even'><center><a onclick='ShowHide();' href='index.php?op=ScanNow'>"._AM_INDEXSCAN_NOW."</a></center></td>";
 	echo "<td class='even'><center><a onclick='ShowHide2();' href='index.php?op=CreateNow'>"._AM_INDEXSCAN_CREATE."</a></center></td>";
@@ -162,11 +150,6 @@
 	echo "<td class='even'><center><a href='../../system/admin.php?fct=preferences&amp;op=showmod&amp;mod="
 		.$xoopsModule ->getVar('mid')."'>"._AM_INDEXSCAN_CONFIG."</a></center></td>";
 	echo '</tr></table>';
-	if ($verifyMessage !=''){
-	echo '<div align="center" id="indexscan_verifyMsg"><br>'.$verifyMessage.'</div>';
-	} elseif ($verifyMessage == 'veri_OK_checksum' {
-	echo '<div align="center"><br>'._AM_INDEXSCAN_VERIFIEDFILESOK.'</div>';
-	};
 	echo '<div align="center" id="slidingDiv"><img src="spinner.gif" align="center"><br>'._AM_INDEXSCAN_SCANNING4MISS.'</div>';
 	echo '<div align="center" id="slidingDiv2"><img src="spinner.gif" align="center"><br>'._AM_INDEXSCAN_CREATINGMISS.'</div>';
 	echo '<div align="center" id="slidingDiv3"><img src="spinner.gif" align="center"><br>'._AM_INDEXSCAN_SCANNING4IFRAME.'</div>';
@@ -432,7 +415,7 @@ function indexScan_Scan4ifrm($dir_handle,$path, $WebPth)
 	if($ChcekFlag)
 	{
 	echo "<div class='indexscan_msg_list'>";
-		echo "<div class='indexscan_msg_head'>".$dir."<img class='indexscan_img' src='html.png'></img><span class='indexscan_iframe_found2'>".$indexscan_type." "._AM_INDEXSCAN_INFECTED."</span></div>";	
+		echo "<div class='indexscan_msg_head'>".$dir."<img class='indexscan_img' src='html.png'></img><span class='indexscan_iframe_found2'>".$indexscan_type._AM_INDEXSCAN_INFECTED."</span></div>";	
 		echo "<p class='indexscan_msg_body'>";
 		echo "<span class='.indexscan_codetext'><textarea rows='30' cols='40' name='code' class='php:nocontrols'>".htmlentities($test)."</textarea>";
 	echo "</span></p>"."</div>";
@@ -447,6 +430,7 @@ function indexScan_Scan4ifrm($dir_handle,$path, $WebPth)
 	} 		// end elseif
 		} 	// end while
 } 			// end function
+
 
 // show hide for lazy load image and message
 echo '<script type="text/javascript">
