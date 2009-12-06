@@ -33,24 +33,25 @@ foreach ( $sums as $line ) {
 	list( $file, $sum ) = explode( ":", $line, 2 );
 	if ($file != '/md5parser.php' && $file != '/indexscan.md5') {
 		if ( !file_exists( $dir.$file ) ) {
-			$verifyMessage .= "$file"._AM_INDEXSCAN_FILEMISSING."<br>";
+			echo "$file missing !\n";
 		} else {
 			$txt =  $dir.$file; 
 				if ( md5_file($txt) != $sum ) {
 					//echo "$file content invalid\n";
-					$verifyMessage .= "$file"._AM_INDEXSCAN_CONTENTINVALID."<br>";
+					$verifyMessage .= "$file content invalid"."<br>";
 			}
-			$verifyMessage = "Veri_OK_checksum";
 		     }
 		      }
 		       }
 		} else {
-			IndexScanCreateMd5('.','');
+			//IndexScanCreateMd5('.','');
+			$verifyMessage .= "indexscan.md5 is missing<br>Please upload!";
 		 }
 
 function IndexScanCreateMd5($dir,$location) 
 {
 	// Open .md5 file for appending
+	chmod("indexscan.md5",0600);
 	$fh = fopen('indexscan.md5', 'a') or die("can't open file");
     // We open the file 
     if ($url = opendir("$dir/$location")) {
@@ -73,6 +74,7 @@ function IndexScanCreateMd5($dir,$location)
 
             }
         }
+		chmod("indexscan.md5",0444);
         closedir($url);
     }
 }
