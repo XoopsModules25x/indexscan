@@ -26,6 +26,9 @@ define("_AM_INDEXSCAN_CREATINGMISS","<br />Cr&#233;ation des fichiers index manq
 define("_AM_INDEXSCAN_SCANNING4IFRAME","<br />Recherche d&#39;Iframe et code javascript ins&#233;r&#233;.<br />Attendez SVP.");
 define("_AM_INDEXSCAN_FINISDINJECTIONS"," fichier(s) contenant le mot &#34;iframe&#34; ou &#34;fromCharCode&#34; indiquant la présence d&#39;Iframe(s) ou de javascript(s) ins&#233;r&#233;(s).<br />Vérifiez si c'est bien le cas en cliquant sur la barre rouge pour voir le code source, avant de prendre toute action corrective.<br /><br />Nombre total de fichiers scannés :");
 
+// Added in 2.01
+define ("_AM_INDEXSCAN_NOTVERIFY"," : The Checksum of this file is different from original!");
+define ("_AM_INDEXSCAN_VERIFIED"," Checksum for admin/index.php is verified.");
 /**
  * @translation     AFUX (Association Francophone des Utilisateurs de Xoops) (http://www.afux.org/)
  * @specification   _LANGCODE: fr

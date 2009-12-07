@@ -25,4 +25,7 @@ define("_AM_INDEXSCAN_CREATINGMISS","<br />Opretter manglende indexfiler.<br />V
 define("_AM_INDEXSCAN_SCANNING4IFRAME","<br />Skanner filer for iframe og javascript hijacking.");
 define("_AM_INDEXSCAN_FINISDINJECTIONS"," filer indeholder ordene *iframe* eller *fromCharCode* som kan indikere iframe insert eller kodet javascript insert.<br /> Check for at se indholdet af de fundne filer ved at klikke på den røde bar, før du handler yderliger med disse filer.<br /><br /> Filer der blev skannet ialt: ");
 
+// Added in 2.01
+define ("_AM_INDEXSCAN_NOTVERIFY"," : Denne fils checksum er forskellig fra originalen!");
+define ("_AM_INDEXSCAN_VERIFIED"," Checksum for admin/index.php er ok.");
 ?>
