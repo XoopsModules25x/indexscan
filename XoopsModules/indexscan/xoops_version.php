@@ -22,7 +22,7 @@
  */
  
 $modversion['name'] =_MI_INDEXSCAN_MODULE_NAME;
-$modversion['version'] = "2.0";
+$modversion['version'] = "2.01";
 $modversion['description'] = _MI_INDEXSCAN_MODULE_DESC;
 $modversion['credits'] = "Developped by Culex http://www.culex.dk";
 $modversion['author'] = "Culex";
