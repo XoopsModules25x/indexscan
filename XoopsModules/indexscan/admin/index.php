@@ -191,12 +191,10 @@ function xoops_PrintPaths ( $xoopsFilePath,$File2Look4,$count ) {
 }
 
 // Setting up the search //		
-	$RootDir = '../../../';
+		global $xoopsModuleConfig;
+		$RootDir = indexscan_GetModuleOption('indexscan_rootorsub');
 	$File2Look4 = 'index.html';
 	$ReturnFindings = 'xoops_PrintPaths';
-	global $xoopsModuleConfig;
-
-// Define wich folders not to scan	
 	$Dirs2Exclude = array( $xoopsModuleConfig['exep_01'], $xoopsModuleConfig['exep_02'], $xoopsModuleConfig['exep_03'], $xoopsModuleConfig['exep_04'] );
 
 /*
@@ -259,11 +257,11 @@ case "CreateNow":
 }
 
 // Setting up the search //		
-	$RootDirCR = '../../../';
+	
 	$File2Look4CR = 'index.html';
 	$ReturnFindingsCR = 'xoops_PrintPathsCR';
-	global $xoopsModuleConfig;
-
+	$RootDirCR = indexscan_GetModuleOption('indexscan_rootorsub');
+	
 // Define wich folders not to scan	
 	$Dirs2ExcludeCR = array( $xoopsModuleConfig['exep_01'], $xoopsModuleConfig['exep_02'], $xoopsModuleConfig['exep_03'], $xoopsModuleConfig['exep_04'] );
 
@@ -274,6 +272,7 @@ function xoops_CreateMissingIndexFiles ($folderUrl) {
 $myts =& MyTextSanitizer::getInstance();
 file_put_contents($folderUrl.'index.html', "<script>history.go(-1);</script>");
 }
+
 /*
 This function will look through all folder on server starting from $RootDir. And will call back all missing
 dirs not having index.html
@@ -312,7 +311,7 @@ function xoops_Look4FilesCR ( $RootDirCR, $File2Look4CR, $ReturnFindingsCR = NUL
 			}
 		return FALSE; // end of tree.
 			}
-// $Dirs2Exclude = array( 'modules', './', 'themes' );
+
 	print xoops_Look4FilesCR ( $RootDirCR, $File2Look4CR, $ReturnFindingsCR, $Dirs2ExcludeCR );
 	print "<tr><td colspan=2></td></tr><tr><td colspan=2><center></center></td></tr><tr><td colspan=2></td></tr>";
 	print "<tr><td colspan=2></td></tr><tr><th colspan=2><center>$countCR "._AM_INDEXSCAN_CREATEDINDEXFILES."</center></th></tr><tr><td colspan=2></td></tr>";
@@ -327,6 +326,7 @@ function xoops_Look4FilesCR ( $RootDirCR, $File2Look4CR, $ReturnFindingsCR = NUL
                 break;	
 		
 		case "injectionScan":	
+
 /* Function to scan your website folders for index.html <iframe> injections
 
 			Thanks to Ghia for recommending this feature.
@@ -340,12 +340,13 @@ function xoops_Look4FilesCR ( $RootDirCR, $File2Look4CR, $ReturnFindingsCR = NUL
 		xoops_cp_header();
 		indexScan_Choice();
 		print "<div id ='indexscan_result' width='100%'><table class='outer' width='100%'>";
-
-		$path = "../../..";
+		global $xoopsModuleConfig;
+		$path = substr_replace(indexscan_GetModuleOption('indexscan_rootorsub'),"",-1);
+		
 			$baseDir = basename(dirname($_SERVER['PHP_SELF']));
 			$WebPth = 'http://'.$_SERVER['HTTP_HOST'].'/';
 			$content_pattern = array("iframe","fromCharCode","%69%66%72%61%6D%65","document.write(unescape(");
-			$content_pattern_exclude = array("../../../modules/indexscan/admin/index.php");
+			$content_pattern_exclude = array("../../../modules/indexscan/admin/index.php","../../../../modules/indexscan/admin/index.php");
 			$count_files = 0;
 			$count_injections = 0;
 				echo _AM_INDEXSCAN_CHECKFORFILES;
@@ -485,4 +486,42 @@ echo '<link type="text/css" rel="stylesheet" href="js/Styles/SyntaxHighlighter.c
 dp.SyntaxHighlighter.ClipboardSwf = "js/Scripts/clipboard.swf";
 dp.SyntaxHighlighter.HighlightAll("code");
 </script>';
+
+/**
+ * Returns a module's option
+ *
+ * Return's a module's option (originally for the news module)
+ *
+ * @package News
+ * @author Hervé Thouzard (www.herve-thouzard.com)
+ * @copyright    (c) The Xoops Project - www.xoops.org
+ * @param string $option    module option's name
+ */ 
+function indexscan_GetModuleOption($option, $repmodule='indexscan')
+{
+	global $xoopsModuleConfig, $xoopsModule;
+	static $tbloptions= Array();
+	if(is_array($tbloptions) && array_key_exists($option,$tbloptions)) {
+		return $tbloptions[$option];
+	}
+
+	$retval = false;
+	if (isset($xoopsModuleConfig) && (is_object($xoopsModule) && $xoopsModule->getVar('dirname') == $repmodule && $xoopsModule->getVar('isactive'))) {
+		if(isset($xoopsModuleConfig[$option])) {
+			$retval= $xoopsModuleConfig[$option];
+		}
+	} else {
+		$module_handler =& xoops_gethandler('module');
+		$module =& $module_handler->getByDirname($repmodule);
+		$config_handler =& xoops_gethandler('config');
+		if ($module) {
+		    $moduleConfig =& $config_handler->getConfigsByCat(0, $module->getVar('mid'));
+	    	if(isset($moduleConfig[$option])) {
+	    		$retval= $moduleConfig[$option];
+	    	}
+		}
+	}
+	$tbloptions[$option]=$retval;
+	return $retval;
+}
 ?>

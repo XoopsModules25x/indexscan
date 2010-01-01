@@ -22,9 +22,9 @@
  */
  
 $modversion['name'] =_MI_INDEXSCAN_MODULE_NAME;
-$modversion['version'] = "2.01";
+$modversion['version'] = "2.02";
 $modversion['description'] = _MI_INDEXSCAN_MODULE_DESC;
-$modversion['credits'] = "Developped by Culex http://www.culex.dk";
+$modversion['credits'] = "Developped by Culex http://www.culex.dk, Thanks Xoops Com for helping out, translators for translating and especially Burning for The cool Logo";
 $modversion['author'] = "Culex";
 $modversion['help'] = "top.html";
 $modversion['license'] = "GPL see LICENSE";
@@ -52,6 +52,14 @@ $modversion['sub'][2]['url'] = "index.php?op=CreateNow";
 // Blocks
 
 // Templates
+
+$modversion['config'][] = array(
+    'name' 			=> 'indexscan_rootorsub',
+    'title' 		=> '_MI_INDEXSCAN_ROOTORSUB',
+    'description' 	=> '_MI_INDEXSCAN_ROOTORSUB_DESC',
+    'formtype' 		=> 'textbox',
+    'valuetype' 	=> 'text',
+    'default' 		=> '../../../');
 
 $modversion['config'][] = array(
 	'name' 			=> 'exep_01',

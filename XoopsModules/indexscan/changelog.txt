@@ -62,19 +62,30 @@ IndexScan version 2.0
 
 v2.0 friday 27 november 2009 - 13:28 (gmt +1)
 
-- Added searchwords "fromCharCode","%69%66%72%61%6D%65","document.write(unescape(" to search words in iframe scan, to look for encoded javascript includes
+- Added searchword "fromCharCode" to search word in iframe scan, to look for encoded javascript includes
 - Spiced the scanning up with some highlighting javascript + some jquery for the scan and messages with lazy load
 - Excluded the modules/indexscan from the iframe scan. The description and functions contain multible iframe-words and thus always gets caught in the scan.
 - new translations definitions in  admin.php are
 
-// Added in 1.01
+// Added in 2.00
 define("_AM_INDEXSCAN_CHECKFORFILES","<tr class='header'><center><h2>Checking files for IFRAME Infection</h2></tr></center><center><small>Not that not all uses of Ifram is injections.<br>Check the code in the files found before you delete.<br><hr></small></center>");
 define("_AM_INDEXSCAN_UNABLETOREADFILE","Unable to open file ");
-define("_AM_INDEXSCAN_INFECTED"," found!!");
+define("_AM_INDEXSCAN_INFECTED","!!Word IFRAME found!!");
+define("_AM_INDEXSCAN_CLEAN","OK");
+define("_AM_INDEXSCAN_INJECTIONSCAN","Scan for ifram injections");
 
-//added in 2.00
+//added in 2.01
 define("_AM_INDEXSCAN_SCANNING4MISS","<br>Looking for missin index files.<br>Please wait.");
 define("_AM_INDEXSCAN_CREATINGMISS","<br>Creating missing index files.<br>Please wait.");
 define("_AM_INDEXSCAN_SCANNING4IFRAME","<br>Looking for iframes and encoded javascript.<br>Please wait.");
 
 	Default english translations have been added in all language files. Feel free to send me in your language so I can change to correct language.
+	
+//added in 2.02
+
+- Added the option in config to change the base of the starting point for the scans. To avoid users - having xoops_data, xoops_lib outside of the root, not having all folders scanned.
+- Added a function to get the $xoopsModuleConfig (root) where global $xoopsModuleConfig not working in admin.
+- New language defines are.:
+//Added in 2.02
+define("_MI_INDEXSCAN_ROOTORSUB","Root or sub folder installation");
+define("_MI_INDEXSCAN_ROOTORSUB_DESC","Write here from where you want to start scanning<br/>'../../../' if your web is like 'www.myspace.com/mainfile,php'<br/>'../../../../' if it is like www.websted.dk/htdocs/mainfile.com");

@@ -17,4 +17,7 @@ define("_MI_INDEXSCAN_EXEP3","Niet te scannen map 03");
 define("_MI_INDEXSCAN_EXEP3_DESC","");
 define("_MI_INDEXSCAN_EXEP4","Niet te scannen map 04");
 define("_MI_INDEXSCAN_EXEP4_DESC","");
+//Added in 2.02
+define("_MI_INDEXSCAN_ROOTORSUB","Root or sub folder installation");
+define("_MI_INDEXSCAN_ROOTORSUB_DESC","Write here from where you want to start scanning<br/>'../../../' if your web is like 'www.myspace.com/mainfile,php'<br/>'../../../../' if it is like www.websted.dk/htdocs/mainfile.com");
 ?>

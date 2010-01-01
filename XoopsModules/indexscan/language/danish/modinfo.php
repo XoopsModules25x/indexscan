@@ -17,4 +17,7 @@ define("_MI_INDEXSCAN_EXEP3_DESC","");
 define("_MI_INDEXSCAN_EXEP4","Mappe Der ikke skal skannes 04");
 define("_MI_INDEXSCAN_EXEP4_DESC","");
 
+//Added in 2.02
+define("_MI_INDEXSCAN_ROOTORSUB","Root eller submappe installation");
+define("_MI_INDEXSCAN_ROOTORSUB_DESC","Indtast her hvorfra du vil begynde din scan<br/>'../../../' hvis sit websted er som 'www.myspace.com/mainfile,php'<br/>'../../../../' hvis det er som www.websted.dk/htdocs/mainfile.com");
 ?>

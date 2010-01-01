@@ -17,4 +17,7 @@ define("_MI_INDEXSCAN_EXEP3","پوشه ای که جستجو نشود ۳");
 define("_MI_INDEXSCAN_EXEP3_DESC","");
 define("_MI_INDEXSCAN_EXEP4","پوشه ای که جستجو نشود ۴");
 define("_MI_INDEXSCAN_EXEP4_DESC","");
+//Added in 2.02
+define("_MI_INDEXSCAN_ROOTORSUB","Root or sub folder installation");
+define("_MI_INDEXSCAN_ROOTORSUB_DESC","Write here from where you want to start scanning<br/>'../../../' if your web is like 'www.myspace.com/mainfile,php'<br/>'../../../../' if it is like www.websted.dk/htdocs/mainfile.com");
 ?>
