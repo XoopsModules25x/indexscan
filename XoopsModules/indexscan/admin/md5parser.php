@@ -3,8 +3,8 @@ $dir = "";
 $file="index.php";
 $verifyMessage="";
 	//
-			$checksum ="d56df8565175834e6ee70011ab861a30"; // php checksum Linux
-			$checksumNT = "a4227c6859e4e5a44b09884541e02cf6"; // php checksum Winnt
+			$checksum ="ba18ea51bebb89919e323e7b76dfe093"; // php checksum Linux
+			$checksumNT = "299fa4b44d737535c910602a236e3416"; // php checksum Winnt
 			$indexscanfile =  $dir.$file; 
 			//echo "<br><br>".$dir.$file." : ".md5_file("$indexscanfile")." = ".$checksum;
 				if ( md5_file($indexscanfile) != $checksum && md5_file($indexscanfile) != $checksumNT) {

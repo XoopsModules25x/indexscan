@@ -22,7 +22,7 @@
  */
  
 $modversion['name'] =_MI_INDEXSCAN_MODULE_NAME;
-$modversion['version'] = "2.02";
+$modversion['version'] = "2.03";
 $modversion['description'] = _MI_INDEXSCAN_MODULE_DESC;
 $modversion['credits'] = "Developped by Culex http://www.culex.dk, Thanks Xoops Com for helping out, translators for translating and especially Burning for The cool Logo";
 $modversion['author'] = "Culex";
@@ -54,12 +54,28 @@ $modversion['sub'][2]['url'] = "index.php?op=CreateNow";
 // Templates
 
 $modversion['config'][] = array(
+    'name' 			=> 'indexscan_frombackup',
+    'title' 		=> '_MI_INDEXSCAN_FROMBACKUP',
+    'description' 	=> '_MI_INDEXSCAN_FROMBACKUP_DESC',
+    'formtype' 		=> 'textbox',
+    'valuetype' 	=> 'text',
+    'default' 		=> 'testing');
+
+$modversion['config'][] = array(
     'name' 			=> 'indexscan_rootorsub',
     'title' 		=> '_MI_INDEXSCAN_ROOTORSUB',
     'description' 	=> '_MI_INDEXSCAN_ROOTORSUB_DESC',
     'formtype' 		=> 'textbox',
     'valuetype' 	=> 'text',
     'default' 		=> '../../../');
+	
+$modversion['config'][] = array(
+    'name' 			=> 'indexscan_illegalfiles',
+    'title' 		=> '_MI_INDEXSCAN_ILLEGALFILETYPES',
+    'description' 	=> '_MI_INDEXSCAN_ILLEGALFILETYPES_DESC',
+    'formtype' 		=> 'textarea',
+    'valuetype' 	=> 'text',
+    'default' 		=> 'php|html|htm|jpg|png|gif|js|ico|txt|css|htaccess|eot|sql|swf|tpl|ttf');	
 
 $modversion['config'][] = array(
 	'name' 			=> 'exep_01',

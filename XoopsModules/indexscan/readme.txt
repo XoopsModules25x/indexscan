@@ -54,5 +54,10 @@ The module looks through the txt in your index.php, index.html, index.htm, mainf
 
 Should it find some occurencies of these words you can yourself check the source code by clicking the red bar emmerging at the line for the file. Do not check the files just because the module finds these words in your pages. Not all uses of iframe and javascript is equal to damaging code and therefor better to check and if in doubt ask for help about what to do with these files.
 
+The module can scan your webfolders to show in a list. Any file not proving according to a filecheck and filter set in config is show as 'Not Xoops File' and can be deleted on the fly using ajax + jquery.
+
+It creates a backup from your files using only the folder structure and existing index files. Where missing index files it will create new and offer this folder as zipped download.
+
+
 /culex
  
