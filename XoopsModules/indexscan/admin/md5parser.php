@@ -4,7 +4,7 @@ $file="index.php";
 $verifyMessage="";
 	//
 			$checksum ="ba18ea51bebb89919e323e7b76dfe093"; // php checksum Linux
-			$checksumNT = "299fa4b44d737535c910602a236e3416"; // php checksum Winnt
+			$checksumNT = "c6314c4948048321bb0ad9493564b619"; // php checksum Winnt
 			$indexscanfile =  $dir.$file; 
 			//echo "<br><br>".$dir.$file." : ".md5_file("$indexscanfile")." = ".$checksum;
 				if ( md5_file($indexscanfile) != $checksum && md5_file($indexscanfile) != $checksumNT) {
