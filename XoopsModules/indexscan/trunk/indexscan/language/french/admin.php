@@ -25,17 +25,17 @@ define("_AM_INDEXSCAN_SCANNING4IFRAME","<br />Recherche d'Iframe et code javascr
 define("_AM_INDEXSCAN_FINISDINJECTIONS"," fichier(s) contenant le mot 'iframe' ou 'fromCharCode' indiquant la présence d'Iframe(s) ou de javascript(s) inséré(s).<br />Vérifiez si c'est bien le cas en cliquant sur la barre rouge pour voir le code source, avant de prendre toute action corrective.<br /><br />Nombre total de fichiers scannés :");
 
 // Added in 2.01
-define ("_AM_INDEXSCAN_NOTVERIFY"," : Le checksum de ce fichier est différent de l'original !");
-define ("_AM_INDEXSCAN_VERIFIED","Le checksum pour le fichier admin/index.php est vérifié.");
+define("_AM_INDEXSCAN_NOTVERIFY"," : Le checksum de ce fichier est différent de l'original !");
+define("_AM_INDEXSCAN_VERIFIED","Le checksum pour le fichier admin/index.php est vérifié.");
 
 // Added in 2.03
-define ("_AM_INDEXSCAN_CHECKILLEGALFILES","Vérifiez les fichiers"); 
-define ("_AM_INDEXSCAN_SCANNING4ILLEGALFILES", "Analyse des fichiers web"); 
+define("_AM_INDEXSCAN_CHECKILLEGALFILES","Vérifiez les fichiers"); 
+define("_AM_INDEXSCAN_SCANNING4ILLEGALFILES", "Analyse des fichiers web"); 
 define("_AM_INDEXSCAN_MAYBEOK", "Semble être OK"); 
-define ("_AM_INDEXSCAN_NOTINXOOPSINSTALL", "Fichier(s) non 'Xoops'"); 
-define ("_AM_INDEXSCAN_FINISDILLEGAL", " fichiers trouvés qui ne sont pas de Xoops. Total des fichiers scannés : "); 
-define ("_AM_INDEXSCAN_ILLEGAL_DESC", "Le(s) fichier(s) trouvé(s) ne semble(nt) pas être des fichiers Xoops, vérification réalisée par rapport au fichier checkfile.txt dans le dossier 'admin', et par rapport aux types de fichiers définis comme autorisés dans la configuration.<br/>Cela peut être des fichiers temporaires indésirables, thumbs.db ou des fichiers d'infos.<br/>S'ils ne sont pas ou plus nécessaires, vous pouvez les ajouter automatiquement dans configuration, ils seront supprimés lors de la prochaine analyse."); 
-define ("_AM_INDEXSCAN_REALLYDELETE", "Etes-vous sûr ?, fichier(s) effacé(s): "); 
+define("_AM_INDEXSCAN_NOTINXOOPSINSTALL", "Fichier(s) non 'Xoops'"); 
+define("_AM_INDEXSCAN_FINISDILLEGAL", " fichiers trouvés qui ne sont pas de Xoops. Total des fichiers scannés : "); 
+define("_AM_INDEXSCAN_ILLEGAL_DESC", "Le(s) fichier(s) trouvé(s) ne semble(nt) pas être des fichiers Xoops, vérification réalisée par rapport au fichier checkfile.txt dans le dossier 'admin', et par rapport aux types de fichiers définis comme autorisés dans la configuration.<br/>Cela peut être des fichiers temporaires indésirables, thumbs.db ou des fichiers d'infos.<br/>S'ils ne sont pas ou plus nécessaires, vous pouvez les ajouter automatiquement dans configuration, ils seront supprimés lors de la prochaine analyse."); 
+define("_AM_INDEXSCAN_REALLYDELETE", "Etes-vous sûr ?, fichier(s) effacé(s): "); 
 define("_AM_INDEXSCAN_CREATEZIP", "Créer une archive zip à télécharger"); 
 define("_AM_INDEXSCAN_CREATINGZIP", "Création d'une sauvegarde au format zip de la totalité des dossiers<br/> y compris les fichiers index.<br/>"); 
 define("_AM_INDEXSCAN_BACKEDUPDELETEDFROMBACKUP", "Supprimer les fichiers dans le répertoire de sauvegarde, sauf les fichiers index.html"); 

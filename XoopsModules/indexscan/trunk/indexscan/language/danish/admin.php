@@ -26,17 +26,17 @@ define("_AM_INDEXSCAN_SCANNING4IFRAME","<br>Skanner filer for iframe og javascri
 define("_AM_INDEXSCAN_FINISDINJECTIONS"," filer indeholder ordene *iframe* eller *fromCharCode* som kan indikere iframe insert eller kodet javascript insert.<br> Check for at se indholdet af de fundne filer ved at klikke på den røde bar, før du handler yderliger med disse filer.<br><br> Filer der blev skannet ialt: ");
 
 // Added in 2.01
-define ("_AM_INDEXSCAN_NOTVERIFY"," : Checksummen af denne fil er forskellig fra originalen!");
-define ("_AM_INDEXSCAN_VERIFIED"," Checksummen for admin/index.php er verificeret.");
+define("_AM_INDEXSCAN_NOTVERIFY"," : Checksummen af denne fil er forskellig fra originalen!");
+define("_AM_INDEXSCAN_VERIFIED"," Checksummen for admin/index.php er verificeret.");
 
 // Added in 2.02
-define ("_AM_INDEXSCAN_CHECKILLEGALFILES","Check filer");
-define ("_AM_INDEXSCAN_SCANNING4ILLEGALFILES", "Skanner webfiler");
+define("_AM_INDEXSCAN_CHECKILLEGALFILES","Check filer");
+define("_AM_INDEXSCAN_SCANNING4ILLEGALFILES", "Skanner webfiler");
 define("_AM_INDEXSCAN_MAYBEOK", "Muligvis ok fil");
-define ("_AM_INDEXSCAN_NOTINXOOPSINSTALL", "Ikke en Xoopsfil");
-define ("_AM_INDEXSCAN_FINISDILLEGAL", " filer blev indetificeret til ikke at være Xoops filer. Antal filer scannet totalt: ");
-define ("_AM_INDEXSCAN_ILLEGAL_DESC", "Filerne der blev fundet som ikke er Xoops filer blev matchet imod checkfile.txt i adminmappen, og imod filer i config som er defineret som lovlige filtyper.<br/>Disse filer kan være alt fra tmp filer til Thumbs.db eller info.txt filer.<br/>Hvis du ikke ønsker disse filer så tilføj dem til listen over 'automatisk slet listen' i config, og de vil blive slettet næste gang du kører denne skanning.");
-define ("_AM_INDEXSCAN_REALLYDELETE", "Er du sikker ?, slet fil.: ");
+define("_AM_INDEXSCAN_NOTINXOOPSINSTALL", "Ikke en Xoopsfil");
+define("_AM_INDEXSCAN_FINISDILLEGAL", " filer blev indetificeret til ikke at være Xoops filer. Antal filer scannet totalt: ");
+define("_AM_INDEXSCAN_ILLEGAL_DESC", "Filerne der blev fundet som ikke er Xoops filer blev matchet imod checkfile.txt i adminmappen, og imod filer i config som er defineret som lovlige filtyper.<br/>Disse filer kan være alt fra tmp filer til Thumbs.db eller info.txt filer.<br/>Hvis du ikke ønsker disse filer så tilføj dem til listen over 'automatisk slet listen' i config, og de vil blive slettet næste gang du kører denne skanning.");
+define("_AM_INDEXSCAN_REALLYDELETE", "Er du sikker ?, slet fil.: ");
 define("_AM_INDEXSCAN_CREATEZIP", "Lav zip for download");
 define("_AM_INDEXSCAN_CREATINGZIP", "Laver backup med tomme mapper<br/>plus index filer.<br/>");
 define("_AM_INDEXSCAN_BACKEDUPDELETEDFROMBACKUP", "Slettede filer i mappen fra backup undtaget index.html filer");

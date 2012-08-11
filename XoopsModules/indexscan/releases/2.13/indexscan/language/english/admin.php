@@ -25,17 +25,17 @@ define("_AM_INDEXSCAN_SCANNING4IFRAME","<br>Looking for iframes and encoded java
 define("_AM_INDEXSCAN_FINISDINJECTIONS"," files contain the word *iframe* or *fromCharCode* indicating ifram insert or encoded javascript <br> Check to see if this is the case by clicking the red bar to see source code. Before taking any action.<br><br> Total number of files scanned:");
 
 // Added in 2.01
-define ("_AM_INDEXSCAN_NOTVERIFY"," : The Checksum of this file is different from original!");
-define ("_AM_INDEXSCAN_VERIFIED"," Checksum for admin/index.php is verified.");
+define("_AM_INDEXSCAN_NOTVERIFY"," : The Checksum of this file is different from original!");
+define("_AM_INDEXSCAN_VERIFIED"," Checksum for admin/index.php is verified.");
 
 // Added in 2.03
-define ("_AM_INDEXSCAN_CHECKILLEGALFILES","Check files");
-define ("_AM_INDEXSCAN_SCANNING4ILLEGALFILES", "Scanning web files");
+define("_AM_INDEXSCAN_CHECKILLEGALFILES","Check files");
+define("_AM_INDEXSCAN_SCANNING4ILLEGALFILES", "Scanning web files");
 define("_AM_INDEXSCAN_MAYBEOK", "Looks to be ok");
-define ("_AM_INDEXSCAN_NOTINXOOPSINSTALL", "Not Xoops file");
-define ("_AM_INDEXSCAN_FINISDILLEGAL", " files found that are not Xoops files. Total files scanned: ");
-define ("_AM_INDEXSCAN_ILLEGAL_DESC", "The file found Not to be Xoops files, are checked against checkfile.txt in admin folder, and agains files in config defined as allowed file types.<br/>These files could be unwanted tmp, thumbs.db, or info files.<br/>If you you dont need these files add them to automaticly delete in config and they will be deleted when you run this scan next time.");
-define ("_AM_INDEXSCAN_REALLYDELETE", "Are you sure ?, delete file.: ");
+define("_AM_INDEXSCAN_NOTINXOOPSINSTALL", "Not Xoops file");
+define("_AM_INDEXSCAN_FINISDILLEGAL", " files found that are not Xoops files. Total files scanned: ");
+define("_AM_INDEXSCAN_ILLEGAL_DESC", "The file found Not to be Xoops files, are checked against checkfile.txt in admin folder, and agains files in config defined as allowed file types.<br/>These files could be unwanted tmp, thumbs.db, or info files.<br/>If you you dont need these files add them to automaticly delete in config and they will be deleted when you run this scan next time.");
+define("_AM_INDEXSCAN_REALLYDELETE", "Are you sure ?, delete file.: ");
 define("_AM_INDEXSCAN_CREATEZIP", "Create zip file for download");
 define("_AM_INDEXSCAN_CREATINGZIP", "Creating backup with empty folders<br/>plus index files.<br/>");
 define("_AM_INDEXSCAN_BACKEDUPDELETEDFROMBACKUP", "Deleted files in folder from backup except index.html files");

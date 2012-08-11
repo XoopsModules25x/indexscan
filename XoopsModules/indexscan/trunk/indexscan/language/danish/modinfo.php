@@ -21,5 +21,5 @@ define("_MI_INDEXSCAN_EXEP4_DESC","");
 define("_MI_INDEXSCAN_ROOTORSUB","Root eller submappe installation");
 define("_MI_INDEXSCAN_ROOTORSUB_DESC","Indtast her hvorfra du vil begynde din scan<br/>'../../../' hvis sit websted er som 'www.myspace.com/mainfile,php'<br/>'../../../../' hvis det er som www.websted.dk/htdocs/mainfile.com");
 define("_MI_INDEXSCAN_FROMBACKUP", "Lav xip fil");
-define ("_MI_INDEXSCAN_FROMBACKUP_DESC", "Laver en zipfil med samme mappestruktur som originalen du ftper til folder2backup.<br/>Zipfilen indeholder ikke andet end de tomme mapper og,<br/>index.html filer der mangler fra <br/>originalen hvor der ikke forefindes index.php.<br/><br/>Mappenavnet er det samme som i din folder2backup mappe, som f.eks. 'testing', og kan være hvad som helts<br/>du vælger. Testing mappen kan du slette, den er kun som eksempel.");
+define("_MI_INDEXSCAN_FROMBACKUP_DESC", "Laver en zipfil med samme mappestruktur som originalen du ftper til folder2backup.<br/>Zipfilen indeholder ikke andet end de tomme mapper og,<br/>index.html filer der mangler fra <br/>originalen hvor der ikke forefindes index.php.<br/><br/>Mappenavnet er det samme som i din folder2backup mappe, som f.eks. 'testing', og kan være hvad som helts<br/>du vælger. Testing mappen kan du slette, den er kun som eksempel.");
 ?>
