@@ -30,23 +30,23 @@ define("_AM_INDEXSCAN_VERIFIED","Le checksum pour le fichier admin/index.php est
 
 // Added in 2.03
 define("_AM_INDEXSCAN_CHECKILLEGALFILES","Vérifiez les fichiers"); 
-define("_AM_INDEXSCAN_SCANNING4ILLEGALFILES", "Analyse des fichiers web"); 
-define("_AM_INDEXSCAN_MAYBEOK", "Semble être OK"); 
-define("_AM_INDEXSCAN_NOTINXOOPSINSTALL", "Fichier(s) non 'Xoops'"); 
-define("_AM_INDEXSCAN_FINISDILLEGAL", " fichiers trouvés qui ne sont pas de Xoops. Total des fichiers scannés : "); 
-define("_AM_INDEXSCAN_ILLEGAL_DESC", "Le(s) fichier(s) trouvé(s) ne semble(nt) pas être des fichiers Xoops, vérification réalisée par rapport au fichier checkfile.txt dans le dossier 'admin', et par rapport aux types de fichiers définis comme autorisés dans la configuration.<br/>Cela peut être des fichiers temporaires indésirables, thumbs.db ou des fichiers d'infos.<br/>S'ils ne sont pas ou plus nécessaires, vous pouvez les ajouter automatiquement dans configuration, ils seront supprimés lors de la prochaine analyse."); 
-define("_AM_INDEXSCAN_REALLYDELETE", "Etes-vous sûr ?, fichier(s) effacé(s): "); 
-define("_AM_INDEXSCAN_CREATEZIP", "Créer une archive zip à télécharger"); 
-define("_AM_INDEXSCAN_CREATINGZIP", "Création d'une sauvegarde au format zip de la totalité des dossiers<br/> y compris les fichiers index.<br/>"); 
-define("_AM_INDEXSCAN_BACKEDUPDELETEDFROMBACKUP", "Supprimer les fichiers dans le répertoire de sauvegarde, sauf les fichiers index.html"); 
-define("_AM_INDEXSCAN_BACKEDUP2", "Dossier(s) sauvegardé(s).: "); 
-define("_AM_INDEXSCAN_DOWNLOADZIP", "Télécharger les fichiers index archivés au format zip"); 
-define("_AM_INDEXSCAN_CREATINGZIPFORDOWNLOAD", "Création d'une fichier au format zip à télécharger"); 
-define("_AM_INDEXSCAN_CREATEDINDEXINBACKUP", "Création d'un fichier index dans le répertoire des sauvegardes"); 
-define("_AM_INDEXSCAN_CLEANUPDONE", "Nettoyage réalisé ... !"); 
-define("_AM_INDEXSCAN_FILESARECOPIED", " Fichiers ont été copiés dans le répertoire de sauvegarde"); 
-define("_AM_INDEXSCAN_FILESDELETED", " Fichiers ont été effacés du répertoire de sauvegarde"); 
-define("_AM_INDEXSCAN_FILESCREATED", " Fichiers index.html ont été créés dans le répertoire de sauvegarde");
+define("_AM_INDEXSCAN_SCANNING4ILLEGALFILES","Analyse des fichiers web"); 
+define("_AM_INDEXSCAN_MAYBEOK","Semble être OK"); 
+define("_AM_INDEXSCAN_NOTINXOOPSINSTALL","Fichier(s) non 'Xoops'"); 
+define("_AM_INDEXSCAN_FINISDILLEGAL"," fichiers trouvés qui ne sont pas de Xoops. Total des fichiers scannés : "); 
+define("_AM_INDEXSCAN_ILLEGAL_DESC","Le(s) fichier(s) trouvé(s) ne semble(nt) pas être des fichiers Xoops, vérification réalisée par rapport au fichier checkfile.txt dans le dossier 'admin', et par rapport aux types de fichiers définis comme autorisés dans la configuration.<br/>Cela peut être des fichiers temporaires indésirables, thumbs.db ou des fichiers d'infos.<br/>S'ils ne sont pas ou plus nécessaires, vous pouvez les ajouter automatiquement dans configuration, ils seront supprimés lors de la prochaine analyse."); 
+define("_AM_INDEXSCAN_REALLYDELETE","Etes-vous sûr ?, fichier(s) effacé(s): "); 
+define("_AM_INDEXSCAN_CREATEZIP","Créer une archive zip à télécharger"); 
+define("_AM_INDEXSCAN_CREATINGZIP","Création d'une sauvegarde au format zip de la totalité des dossiers<br/> y compris les fichiers index.<br/>"); 
+define("_AM_INDEXSCAN_BACKEDUPDELETEDFROMBACKUP","Supprimer les fichiers dans le répertoire de sauvegarde, sauf les fichiers index.html"); 
+define("_AM_INDEXSCAN_BACKEDUP2","Dossier(s) sauvegardé(s).: "); 
+define("_AM_INDEXSCAN_DOWNLOADZIP","Télécharger les fichiers index archivés au format zip"); 
+define("_AM_INDEXSCAN_CREATINGZIPFORDOWNLOAD","Création d'une fichier au format zip à télécharger"); 
+define("_AM_INDEXSCAN_CREATEDINDEXINBACKUP","Création d'un fichier index dans le répertoire des sauvegardes"); 
+define("_AM_INDEXSCAN_CLEANUPDONE","Nettoyage réalisé ... !"); 
+define("_AM_INDEXSCAN_FILESARECOPIED"," Fichiers ont été copiés dans le répertoire de sauvegarde"); 
+define("_AM_INDEXSCAN_FILESDELETED"," Fichiers ont été effacés du répertoire de sauvegarde"); 
+define("_AM_INDEXSCAN_FILESCREATED"," Fichiers index.html ont été créés dans le répertoire de sauvegarde");
 
 /**
  * @translation     AFUX (Association Francophone des Utilisateurs de Xoops) (http://www.afux.org/)
