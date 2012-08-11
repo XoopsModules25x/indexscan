@@ -31,21 +31,21 @@ define("_AM_INDEXSCAN_VERIFIED"," Checksummen for admin/index.php er verificeret
 
 // Added in 2.02
 define("_AM_INDEXSCAN_CHECKILLEGALFILES","Check filer");
-define("_AM_INDEXSCAN_SCANNING4ILLEGALFILES", "Skanner webfiler");
-define("_AM_INDEXSCAN_MAYBEOK", "Muligvis ok fil");
-define("_AM_INDEXSCAN_NOTINXOOPSINSTALL", "Ikke en Xoopsfil");
-define("_AM_INDEXSCAN_FINISDILLEGAL", " filer blev indetificeret til ikke at være Xoops filer. Antal filer scannet totalt: ");
-define("_AM_INDEXSCAN_ILLEGAL_DESC", "Filerne der blev fundet som ikke er Xoops filer blev matchet imod checkfile.txt i adminmappen, og imod filer i config som er defineret som lovlige filtyper.<br/>Disse filer kan være alt fra tmp filer til Thumbs.db eller info.txt filer.<br/>Hvis du ikke ønsker disse filer så tilføj dem til listen over 'automatisk slet listen' i config, og de vil blive slettet næste gang du kører denne skanning.");
-define("_AM_INDEXSCAN_REALLYDELETE", "Er du sikker ?, slet fil.: ");
-define("_AM_INDEXSCAN_CREATEZIP", "Lav zip for download");
-define("_AM_INDEXSCAN_CREATINGZIP", "Laver backup med tomme mapper<br/>plus index filer.<br/>");
-define("_AM_INDEXSCAN_BACKEDUPDELETEDFROMBACKUP", "Slettede filer i mappen fra backup undtaget index.html filer");
-define("_AM_INDEXSCAN_BACKEDUP2", "Lavede backup fra mappe.: ");
-define("_AM_INDEXSCAN_DOWNLOADZIP", "Download indexfiler zip");
-define("_AM_INDEXSCAN_CREATINGZIPFORDOWNLOAD", "Laver zipfil for download.");
-define("_AM_INDEXSCAN_CREATEDINDEXINBACKUP", "Lavede indexfiler i backupmappen.");
-define("_AM_INDEXSCAN_CLEANUPDONE", "Rydder op...Ok!");
-define("_AM_INDEXSCAN_FILESARECOPIED", " Filer blev kopieret til backup-mappen.");
-define("_AM_INDEXSCAN_FILESDELETED", " Filer blev igen slettet fra backup-mappen.");
-define("_AM_INDEXSCAN_FILESCREATED", " Index.html filer blev dannet i backup-mappen.");
+define("_AM_INDEXSCAN_SCANNING4ILLEGALFILES","Skanner webfiler");
+define("_AM_INDEXSCAN_MAYBEOK","Muligvis ok fil");
+define("_AM_INDEXSCAN_NOTINXOOPSINSTALL","Ikke en Xoopsfil");
+define("_AM_INDEXSCAN_FINISDILLEGAL"," filer blev indetificeret til ikke at være Xoops filer. Antal filer scannet totalt: ");
+define("_AM_INDEXSCAN_ILLEGAL_DESC","Filerne der blev fundet som ikke er Xoops filer blev matchet imod checkfile.txt i adminmappen, og imod filer i config som er defineret som lovlige filtyper.<br/>Disse filer kan være alt fra tmp filer til Thumbs.db eller info.txt filer.<br/>Hvis du ikke ønsker disse filer så tilføj dem til listen over 'automatisk slet listen' i config, og de vil blive slettet næste gang du kører denne skanning.");
+define("_AM_INDEXSCAN_REALLYDELETE","Er du sikker ?, slet fil.: ");
+define("_AM_INDEXSCAN_CREATEZIP","Lav zip for download");
+define("_AM_INDEXSCAN_CREATINGZIP","Laver backup med tomme mapper<br/>plus index filer.<br/>");
+define("_AM_INDEXSCAN_BACKEDUPDELETEDFROMBACKUP","Slettede filer i mappen fra backup undtaget index.html filer");
+define("_AM_INDEXSCAN_BACKEDUP2","Lavede backup fra mappe.: ");
+define("_AM_INDEXSCAN_DOWNLOADZIP","Download indexfiler zip");
+define("_AM_INDEXSCAN_CREATINGZIPFORDOWNLOAD","Laver zipfil for download.");
+define("_AM_INDEXSCAN_CREATEDINDEXINBACKUP","Lavede indexfiler i backupmappen.");
+define("_AM_INDEXSCAN_CLEANUPDONE","Rydder op...Ok!");
+define("_AM_INDEXSCAN_FILESARECOPIED"," Filer blev kopieret til backup-mappen.");
+define("_AM_INDEXSCAN_FILESDELETED"," Filer blev igen slettet fra backup-mappen.");
+define("_AM_INDEXSCAN_FILESCREATED"," Index.html filer blev dannet i backup-mappen.");
 ?>
