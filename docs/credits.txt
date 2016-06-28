@@ -1,0 +1,6 @@
+Credits
+===============
+
+Originally developed by Michael Albertsen (culex) <http://www.culex.dk>
+
+Version 2.3 was updated to XOOPS 2.5.0 Standard GUI by Michael Beck (Mamba)
