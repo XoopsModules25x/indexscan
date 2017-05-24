@@ -336,7 +336,7 @@ This function opens a file called index.html, write content, and saves where not
 */
 function xoops_CreateMissingIndexFiles($folderUrl)
 {
-    $myts =& MyTextSanitizer::getInstance();
+    $myts = MyTextSanitizer::getInstance();
     file_put_contents($folderUrl.'index.html', '<script>history.go(-1);</script>');
 }
 
