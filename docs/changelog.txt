@@ -1,0 +1,68 @@
+2.10 Beta 1                2016-06-27
+---------------------------------
+- Converted to XOOPS 2.5.8 Admin GUI (Mamba)
+- update for PHP7 and XOOPS 2.5.8 (mamba)
+- removed "@version" (mamba)
+- standardization with addNavigation(basename(__FILE__)) (mamba)
+- removed unneeded double quotes and parenthesis (mamba)
+- improved type comparison (mamba)
+- standardization with <br> (mamba)
+- small changes based on testing tool feedback (mamba)
+- code cosmetics (mamba)
+
+2.1 Monday 18 January 2010 - 18:50 (gmt +1)
+-------------------------------
+
+- Added possibility to check files in web folders against xoops check file and filter from Config. Filter separates extensions of files presumed to be ok.
+- Files found in check files marked red are presumed not to be part of XOOPS, and can be deleted by the 'delete icon' using ajax + jquery avoid reloading the page.
+- Added the PclZip.Class to create zip file on the fly for users not having php > 5.20.
+- Scan to create back up from the folders residing in the admin/folder2backup. The scan creates a copy of the empty folders, existing index.html, index.php, index.htm files, delete all other files, creates new indexfiles, and create link to download as zip. Handy when working with developing and want to create a zip with nothing but index files.
+- I tested with htdoc from XOOPS 2.4.4 in a Wamp, creation time is aprox. 2 minutes. Not tested in real server yet, but time must be considerable.
+
+2.02
+-------------------------------------
+- Added the option in config to change the base of the starting point for the scans. To avoid users - having xoops_data, xoops_lib outside of the root, not having all folders scanned.
+- Added a function to get the $xoopsModuleConfig (root) where global $xoopsModuleConfig not working in admin.
+- New language defines are.:
+
+2.0 friday 27 november 2009 - 13:28 (gmt +1)
+----------------------------------
+- Added searchword "fromCharCode" to search word in iFrame scan, to look for encoded javascript includes
+- Spiced the scanning up with some highlighting javascript + some jquery for the scan and messages with lazy load
+- Excluded the modules/indexscan from the iframe scan. The description and functions contain multible iframe-words and thus always gets caught in the scan.
+
+1.1 Wednesday 16 September 2009 - 13:30 (gmt +1)
+-----------------------------
+- Added the ability to scan for use of iFrame in indexfiles // Credit to Ghia for this Idea
+- Added Spanish translation // Thanks to DonCurioso at hispaxoops.com
+
+
+1.1 thursday 17 september 2009 - 21:00 (gmt +1)
+-------------------------------
+- Indexscan included words with (header, mainfile and footer) in the iFrame injection scan.
+
+
+1.1 Friday 02 October 2009 - 21:30 (gmt +1)
+-----------------------------------
+- Changed xoops_version.php to show the correct release number 1.1 (thanks to Burning)
+- Added a new and very cool logo for indexscan (million thanks again to Burning)
+
+
+
+ 1.0 Saturday 7 September 2009 - 15.55 (gmt +1)
+----------------------------------------
+- Added French Language to the module // Thanks to kris_fr
+
+ 1.0 Saturday 12 September 2009 - 10.00 (gmt +1)
+ ------------------------------------
+ - Added dutch translation thanks to Reintjan
+
+
+ 1.0 Thursday 9 july 2009 - 17:08 (GMT +1)
+----------------------------------------
+- Changed function to create index.html, as it ignored index.php3. Now working
+
+ V1.0 Saturday 5 September 2009 - 14.00 (gmt +1)
+
+- Added Persian Language to the module // Thanks to Voltan
+- Decided to let the module go official. No errors or concerns has been reported during testing.
