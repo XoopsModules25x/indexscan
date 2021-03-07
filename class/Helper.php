@@ -33,7 +33,7 @@ class Helper extends \Xmf\Module\Helper
      */
     public function __construct($debug = false)
     {
-        $this->debug = $debug;
+        $this->debug   = $debug;
         $moduleDirName = basename(dirname(__DIR__));
         parent::__construct($moduleDirName);
     }
@@ -70,9 +70,9 @@ class Helper extends \Xmf\Module\Helper
      */
     public function getHandler($name)
     {
-        $ret   = false;
+        $ret = false;
 
-        $class =  __NAMESPACE__ . '\\' . ucfirst($name) . 'Handler';
+        $class = __NAMESPACE__ . '\\' . ucfirst($name) . 'Handler';
         if (!class_exists($class)) {
             throw new \RuntimeException("Class '$class' not found");
         }

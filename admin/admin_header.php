@@ -18,9 +18,9 @@
  */
 
 use Xmf\Module\Admin;
-use XoopsModules\Indexscan\{
-    Helper,
+use XoopsModules\Indexscan\{Helper,
 };
+
 /** @var Admin $adminObject */
 /** @var Helper $helper */
 
@@ -29,7 +29,7 @@ require dirname(__DIR__) . '/preloads/autoloader.php';
 
 require dirname(__DIR__, 3) . '/include/cp_header.php';
 require_once $GLOBALS['xoops']->path('www/class/xoopsformloader.php');
-require  dirname(__DIR__) . '/include/common.php';
+require dirname(__DIR__) . '/include/common.php';
 
 $helper = Helper::getInstance();
 

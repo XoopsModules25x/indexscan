@@ -24,6 +24,7 @@ namespace XoopsModules\Indexscan\Common;
 
 use Xmf\Yaml;
 use XoopsModules\Indexscan\Helper;
+
 /** @var Helper $helper */
 
 /**
@@ -31,19 +32,18 @@ use XoopsModules\Indexscan\Helper;
  */
 class TestdataButtons
 {
-
     //functions for import buttons
     /**
      * @param $adminObject
      */
     public static function loadButtonConfig($adminObject)
     {
-        $moduleDirName      = basename(dirname(__DIR__, 2));
-        $moduleDirNameUpper = mb_strtoupper($moduleDirName);
-        $yamlFile           = dirname(__DIR__, 2) . '/config/admin.yml';
-        $config             = Yaml::readWrapped($yamlFile); // work with phpmyadmin YAML dumps
+        $moduleDirName       = basename(dirname(__DIR__, 2));
+        $moduleDirNameUpper  = mb_strtoupper($moduleDirName);
+        $yamlFile            = dirname(__DIR__, 2) . '/config/admin.yml';
+        $config              = Yaml::readWrapped($yamlFile); // work with phpmyadmin YAML dumps
         $displaySampleButton = $config['displaySampleButton'];
-        $helper = Helper::getInstance();
+        $helper              = Helper::getInstance();
 
         if (1 == $displaySampleButton) {
             xoops_loadLanguage('admin/modulesadmin', 'system');
@@ -60,7 +60,7 @@ class TestdataButtons
 
     public static function hideButtons()
     {
-        $yamlFile            = dirname(__DIR__, 2) . '/config/admin.yml';
+        $yamlFile                   = dirname(__DIR__, 2) . '/config/admin.yml';
         $app                        = [];
         $app['displaySampleButton'] = 0;
         Yaml::save($app, $yamlFile);
@@ -69,7 +69,7 @@ class TestdataButtons
 
     public static function showButtons()
     {
-        $yamlFile            = dirname(__DIR__, 2) . '/config/admin.yml';
+        $yamlFile                   = dirname(__DIR__, 2) . '/config/admin.yml';
         $app                        = [];
         $app['displaySampleButton'] = 1;
         Yaml::save($app, $yamlFile);

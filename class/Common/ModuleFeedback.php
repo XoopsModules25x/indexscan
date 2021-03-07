@@ -104,8 +104,8 @@ class ModuleFeedback extends \XoopsObject
         $editorConfigs['width']  = '100%';
         $editorConfigs['height'] = '400px';
         /** @var \XoopsModuleHandler $moduleHandler */
-        $moduleHandler           = xoops_getHandler('module');
-        $module                  = $moduleHandler->getByDirname('system');
+        $moduleHandler = xoops_getHandler('module');
+        $module        = $moduleHandler->getByDirname('system');
         /** @var \XoopsConfigHandler $configHandler */
         $configHandler           = xoops_getHandler('config');
         $config                  = $configHandler->getConfigsByCat(0, $module->getVar('mid'));

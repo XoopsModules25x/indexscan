@@ -25,9 +25,9 @@ namespace XoopsModules\Indexscan\Common;
  */
 
 use CriteriaCompo;
-use XoopsModules\Indexscan\{
-    Helper
+use XoopsModules\Indexscan\{Helper
 };
+
 /** @var Helper $this ->helper */
 
 // require_once  dirname(dirname(__DIR__)) . '/include/common.php';

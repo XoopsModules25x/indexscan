@@ -34,7 +34,7 @@ namespace XoopsModules\Indexscan\Common;
  */
 class Breadcrumb
 {
-    public $dirname;
+    public  $dirname;
     private $bread = [];
 
     public function __construct()
@@ -51,7 +51,7 @@ class Breadcrumb
     public function addLink($title = '', $link = '')
     {
         $this->bread[] = [
-            'link' => $link,
+            'link'  => $link,
             'title' => $title,
         ];
     }
@@ -66,7 +66,6 @@ class Breadcrumb
         1) create ./templates/chess_common_breadcrumb.tpl)
         2) add declaration to  xoops_version.php
         */
-
         /*
         if (!isset($GLOBALS['xoTheme']) || !\is_object($GLOBALS['xoTheme'])) {
             require $GLOBALS['xoops']->path('class/theme.php');

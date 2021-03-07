@@ -22,23 +22,29 @@ namespace XoopsModules\Indexscan\Common;
  * @category        Module
  * @author          XOOPS Development Team <https://xoops.org>
  * @copyright       {@link https://xoops.org/ XOOPS Project}
- * @license       GNU GPL2orlater(https://www.gnu.org/licenses/gpl-2.0.html)
+ * @license         GNU GPL2orlater(https://www.gnu.org/licenses/gpl-2.0.html)
  */
 
 use Xmf\Request;
-use XoopsModules\Indexscan\{
-    Helper
+use XoopsModules\Indexscan\{Helper
 };
-
 
 /**
  * Class SysUtility
  */
 class SysUtility
 {
-    use VersionChecks; //checkVerXoops, checkVerPhp Traits
-    use ServerStats; // getServerStats Trait
-    use FilesManagement; // Files Management Trait
+    use VersionChecks;
+
+    //checkVerXoops, checkVerPhp Traits
+
+    use ServerStats;
+
+    // getServerStats Trait
+
+    use FilesManagement;
+
+    // Files Management Trait
 
     //--------------- Common module methods -----------------------------
 
@@ -69,7 +75,7 @@ class SysUtility
 
         $select_view   = '';
         $moduleDirName = basename(dirname(__DIR__));
-        $helper = Helper::getInstance();
+        $helper        = Helper::getInstance();
 
         //$pathModIcon16 = XOOPS_URL . '/modules/' . $moduleDirName . '/' . $helper->getConfig('modicons16');
         $pathModIcon16 = $helper->url($helper->getModule()->getInfo('modicons16'));
@@ -161,10 +167,9 @@ class SysUtility
         }
 
         $row      = $GLOBALS['xoopsDB']->fetchBoth($result);
-        $enumList = explode(',', str_replace("'", '', substr($row['COLUMN_TYPE'], 5, - 6)));
+        $enumList = explode(',', str_replace("'", '', substr($row['COLUMN_TYPE'], 5, -6)));
         return $enumList;
     }
-
 
     /**
      * @param array|string $tableName
@@ -178,7 +183,7 @@ class SysUtility
         $new_id = false;
         $table  = $GLOBALS['xoopsDB']->prefix($tableName);
         // copy content of the record you wish to clone
-        $sql = "SELECT * FROM $table WHERE $id_field='$id' ";
+        $sql       = "SELECT * FROM $table WHERE $id_field='$id' ";
         $tempTable = $GLOBALS['xoopsDB']->fetchArray($GLOBALS['xoopsDB']->query($sql), MYSQLI_ASSOC);
         if (!$tempTable) {
             exit($GLOBALS['xoopsDB']->error());
@@ -196,6 +201,7 @@ class SysUtility
 
         return $new_id;
     }
+
     /**
      * truncateHtml can truncate a string up to a number of characters while preserving whole words and HTML tags
      * www.gsdesign.ro/blog/cut-html-string-without-breaking-the-tags
@@ -221,7 +227,7 @@ class SysUtility
             preg_match_all('/(<.+?' . '>)?([^<>]*)/s', $text, $lines, PREG_SET_ORDER);
             $total_length = strlen($ending);
             //$openTags    = [];
-            $truncate     = '';
+            $truncate = '';
             foreach ($lines as $line_matchings) {
                 // if there is any html-tag in this line, handle it and add it (uncounted) to the output
                 if (!empty($line_matchings[1])) {
@@ -275,10 +281,10 @@ class SysUtility
                 }
             }
         } elseif (strlen($text) <= $length) {
-                return $text;
-            } else {
-                $truncate = substr($text, 0, $length - strlen($ending));
-            }
+            return $text;
+        } else {
+            $truncate = substr($text, 0, $length - strlen($ending));
+        }
 
         // if the words shouldn't be cut in the middle...
         if (!$exact) {
@@ -376,7 +382,7 @@ class SysUtility
      *
      * @return bool
      */
-   public static function tableExists($tablename)
+    public static function tableExists($tablename)
     {
         $trace = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 1);
         trigger_error(__FUNCTION__ . " is deprecated, called from {$trace[0]['file']} line {$trace[0]['line']}");
