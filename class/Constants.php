@@ -1,6 +1,6 @@
 <?php
 
-namespace XoopsModules\xxxxx;
+namespace XoopsModules\Indexscan;
 
 /*
  * You may not change or alter any portion of this comment or credits
