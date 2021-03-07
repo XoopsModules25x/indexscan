@@ -1,0 +1,153 @@
+#slidingDiv {
+    display: none;
+    height:100px;
+    padding:20px;
+    margin-top:10px;
+    font-size: 18 px;
+}
+#slidingDiv2 {
+    display: none;
+    height:100px;
+    padding:20px;
+    margin-top:10px;
+    font-size: 18 px;
+}
+#slidingDiv3 {
+    display: none;
+    height:100px;
+    padding:20px;
+    margin-top:10px;
+    font-size: 18 px;
+}
+
+#slidingDiv4 {
+    display: none;
+    height:100px;
+    padding:20px;
+    margin-top:10px;
+    font-size: 18 px;
+}
+
+#slidingDiv5 {
+    display: none;
+    height:100px;
+    padding:20px;
+    margin-top:10px;
+    font-size: 18 px;
+}
+
+p {
+    padding: 0 0 1em;
+}
+
+.indexscan_msg_list {
+    margin: 0px;
+    padding: 0px;
+    font-size: 10px;
+}
+
+.indexscan_msg_head {
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color:#FFCCCC;
+    margin:1px;
+    font-size: 10px;
+}
+
+.indexscan_msg_body {
+    padding: 5px 10px 15px;
+    background-color:#F4F4F8;
+    font-size: 10px;
+}
+
+.indexscan_index_notfound {
+    position:relative;
+    top:5px;
+    float:right;
+    color:#ff0000;
+    font-size: 10px;
+}
+
+.indexscan_path {
+    position:relative;
+    top:5px;
+    color:#000000;
+    font-size: 10px;
+}
+
+.indexscan_created_ok {
+    position:relative;
+    top: 5px;
+    float:right;
+    color:#008000;
+    font-size: 10px;
+}
+
+.indexscan_iframe_found {
+    text-align:left;
+}
+
+.indexscan_iframe_found2 {
+    position:absolute;
+    left:85%;
+}
+
+.indexscan_ok {
+    position:relative;
+    text-align:left;
+    color: #008000;
+    font-size: 10px;
+}
+
+.indexscan_suspicious {
+    position:relative;
+    background-color:FF1F1F;
+    text-align:left;
+    color:#ffffff;
+    font-size: 10px;
+}
+
+.indexscan_delete {
+    position:absolute;
+    left:1%;
+}
+
+.indexscan_notxoopsinstall {
+    position:absolute;
+    background-color:FF1F1F;
+    left:85%;
+    color:#ffffff;
+    font-size: 10px;
+}
+
+.indexscan_maybeok {
+    position:absolute;
+    left:85%;
+    color:#000000;
+    font-size: 10px;
+}
+
+.indexscan_img
+{
+    width:12px;
+    height:12px;
+    border:0;
+    margin:0 10px;
+    float:inherit;
+}
+
+.indexscan_show {
+    position:absolute;
+    left:95%;
+}
+
+#indexscan_verifyMsg {
+    height:100px;
+    padding:20px;
+    margin-top:10px;
+    border-color: #ff0000;
+    border-style: solid;
+    border-size:1px;
+    font-family: arial;
+    font-size: 10px;
+}

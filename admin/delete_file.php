@@ -1,7 +1,7 @@
 <?php
 
 //check admin
-include_once __DIR__ . '/admin_header.php';
+require_once __DIR__ . '/admin_header.php';
 if (isset($_POST['indexscan_deletefile'])) {
     if (isset($_POST['id'])) {
         $id = $_POST['id'];

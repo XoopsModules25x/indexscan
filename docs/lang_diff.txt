@@ -76,5 +76,5 @@ define("_AM_INDEXSCAN_INJECTIONSCAN","Scan for iFrame injections");
  1.0 Saturday 7 September 2009 - 15.55 (gmt +1)
 ----------------------------------------
 - Added this line in language/modinfo.php -- // Thanks CJ
-	define("_MI_INDEXSCAN_CREATEINDEX", "Create index files");
+    define("_MI_INDEXSCAN_CREATEINDEX", "Create index files");
 
