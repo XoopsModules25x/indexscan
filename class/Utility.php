@@ -462,7 +462,7 @@ Print the dir found via look4Files() and show where the index.php is not found,
         if ('' != $verifyMessage) {
             echo '<div align="center" id="indexscan_verifyMsg"><br>' . $verifyMessage . '</div>';
         } else {
-        };
+        }
         echo '<div align="center" id="slidingDiv"><img src="spinner.gif" align="center"><br>' . _AM_INDEXSCAN_SCANNING4MISS . '</div>';
         echo '<div align="center" id="slidingDiv2"><img src="spinner.gif" align="center"><br>' . _AM_INDEXSCAN_CREATINGMISS . '</div>';
         echo '<div align="center" id="slidingDiv3"><img src="spinner.gif" align="center"><br>' . _AM_INDEXSCAN_SCANNING4IFRAME . '</div>';
