@@ -38,7 +38,6 @@ class ModuleFeedback extends \XoopsObject
     /**
      * Constructor
      *
-     * @param null
      */
     public function __construct()
     {

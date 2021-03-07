@@ -1289,7 +1289,7 @@ class PclZip
     // --------------------------------------------------------------------------------
     /**
      * @param bool $p_with_code
-     * @return mixed|string
+     * @return string
      */
     public function errorName($p_with_code = false)
     {
