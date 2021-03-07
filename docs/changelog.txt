@@ -3,6 +3,7 @@
 - updates, cosmetics (mamba)
 - namespaces (mamba)
 - changed from index.html to index.php (mamba)
+- refactored functions from main.php into Utility (mamba)
 
 2.10 Beta 1                2016-06-27
 ---------------------------------
