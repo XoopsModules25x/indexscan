@@ -21,7 +21,6 @@ namespace XoopsModules\Indexscan\Common;
  */
 
 use Xmf\Request;
-use XoopsModules\Indexscan;
 
 //defined('XOOPS_ROOT_PATH') || die('XOOPS root path not defined');
 

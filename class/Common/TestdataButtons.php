@@ -22,7 +22,6 @@ namespace XoopsModules\Indexscan\Common;
  * @license         GNU GPL 2 or later (https://www.gnu.org/licenses/gpl-2.0.html)
  */
 
-use Xmf\Request;
 use Xmf\Yaml;
 use XoopsModules\Indexscan\Helper;
 /** @var Helper $helper */

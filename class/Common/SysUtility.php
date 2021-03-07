@@ -26,9 +26,6 @@ namespace XoopsModules\Indexscan\Common;
  */
 
 use Xmf\Request;
-use MyTextSanitizer;
-use XoopsFormDhtmlTextArea;
-use XoopsFormTextArea;
 use XoopsModules\Indexscan\{
     Helper
 };

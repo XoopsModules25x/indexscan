@@ -26,8 +26,6 @@ namespace XoopsModules\Indexscan\Common;
  * $breadcrumb->addLink( 'bread 3', 'index3.php' );
  * echo $breadcrumb->render();
  */
-use XoopsModules\Indexscan;
-use XoopsModules\Indexscan\Common;
 
 //defined('XOOPS_ROOT_PATH') || exit('XOOPS Root Path not defined');
 

@@ -22,9 +22,7 @@ namespace XoopsModules\Indexscan;
  * @author       Mamba <mambax7@gmail.com>
  */
 
-use XoopsModules\Indexscan\{Common,
-    Constants,
-    Helper
+use XoopsModules\Indexscan\{Common
 };
 
 /**
