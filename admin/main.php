@@ -234,7 +234,7 @@ switch ($op) {
         global $xoopsModuleConfig;
         $RootDir        = $utility::getModuleOption('indexscan_rootorsub');
         $File2Look4     = 'index.php';//changed to .php from .html
-        $ReturnFindings = array($utility, 'printPaths');
+        $ReturnFindings = [$utility, 'printPaths'];
         $Dirs2Exclude   = [$xoopsModuleConfig['exep_01'], $xoopsModuleConfig['exep_02'], $xoopsModuleConfig['exep_03'], $xoopsModuleConfig['exep_04']];
 
         // $Dirs2Exclude = array( 'modules', './', 'themes' );
@@ -254,7 +254,7 @@ switch ($op) {
 
         // Setting up the search //
         $File2Look4CR     = 'index.php';
-        $ReturnFindingsCR = array($utility, 'printPathsCR');
+        $ReturnFindingsCR = [$utility, 'printPathsCR'];
         $RootDirCR        = $utility::getModuleOption('indexscan_rootorsub');
 
         // Define which folders not to scan
