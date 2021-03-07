@@ -444,7 +444,7 @@ Print the dir found via look4Files() and show where the index.php is not found,
     public static function printPathsCR($xoopsFilePathCR, $File2Look4CR, $countCR)
     {
         $xoopsFilePathCRSHORT = substr($xoopsFilePathCR, 7);
-        Utility::createMissingIndexFiles($xoopsFilePathCR);
+        self::createMissingIndexFiles($xoopsFilePathCR);
         print "<tr><td><span class='indexscan_path'>$xoopsFilePathCRSHORT</span></td><td><span class='indexscan_created_ok'>" . _AM_INDEXSCAN_CREATED . '</span><br><td></tr>';
     }
 
