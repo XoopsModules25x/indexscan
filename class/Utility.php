@@ -268,7 +268,7 @@ class Utility extends Common\SysUtility
         $module = self::getModuleOption('indexscan_frombackup');
         $src    = substr_replace(self::getModuleOption('indexscan_rootorsub'), '', -1) . '/modules/indexscan/admin/folder2backup/' . $module;
 //        $dst    = 'backup/' . $module;
-        $dst    = Helper::path('backup/' . $module);
+        $dst    = (new Helper)->path('backup/' . $module);
 
         $dir_iterator = new \RecursiveDirectoryIterator($dst);
         $iterator     = new \RecursiveIteratorIterator($dir_iterator, \RecursiveIteratorIterator::SELF_FIRST);
@@ -291,7 +291,7 @@ class Utility extends Common\SysUtility
         $dst    = 'backup/' . $module . '/';
 
         $archive  = new PclZip('backup/indexscan_' . $module . '_archive.zip');
-        $v_dir    =  Helper::path('backup/' . $module . '/');
+        $v_dir    =  (new Helper)->path('backup/' . $module . '/');
         $v_remove = $v_dir;
         // To support windows and the C: root you need to add the
         // following 3 lines, should be ignored on linux
