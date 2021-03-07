@@ -20,5 +20,5 @@
  * @since         File available since Release 1.0.0
  */
 
-require dirname(dirname(__DIR__)) . '/mainfile.php';
+require dirname(__DIR__, 2) . '/mainfile.php';
 

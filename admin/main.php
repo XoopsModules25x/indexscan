@@ -294,7 +294,7 @@ switch ($op) {
         $WebPth                  = 'http://' . $_SERVER['HTTP_HOST'] . '/';
         $content_pattern         = ['iframe', 'fromCharCode', '%69%66%72%61%6D%65', 'document.write(unescape('];
         $tmp                     = pathinfo(XOOPS_ROOT_PATH . '/mainfile.php');
-        $tmp1                    = dirname(dirname(XOOPS_ROOT_PATH . '/mainfile.php'));
+        $tmp1                    = dirname(XOOPS_ROOT_PATH . '/mainfile.php', 2);
         $tmp2                    = str_replace($tmp1, '', $tmp);
         $file                    = $tmp2['dirname'] . '/modules/indexscan/admin/index.php';
         $fileSub                 = str_replace("\\", '/', $file);

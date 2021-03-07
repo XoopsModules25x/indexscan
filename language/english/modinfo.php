@@ -34,6 +34,6 @@ define(
 //2.10
 // The name of this module
 define('_MI_INDEXSCAN_NAME', 'IndexScan');
-define('_MI_INDEXSCAN_DIRNAME', basename(dirname(dirname(__DIR__))));
+define('_MI_INDEXSCAN_DIRNAME', basename(dirname(__DIR__, 2)));
 define('_MI_INDEXSCAN_HELP_HEADER', __DIR__ . '/help/helpheader.html');
 define('_MI_INDEXSCAN_BACK_2_ADMIN', 'Back to Administration of ');
