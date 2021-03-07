@@ -268,10 +268,10 @@ class SysUtility
                     $truncate .= substr($line_matchings[2], 0, $left + $entities_length);
                     // maximum lenght is reached, so get off the loop
                     break;
-                } else {
+                }
+
                 $truncate     .= $line_matchings[2];
                 $total_length += $content_length;
-                }
                 // if the maximum length is reached, get off the loop
                 if ($total_length >= $length) {
                     break;

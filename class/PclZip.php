@@ -1276,9 +1276,9 @@ class PclZip
     {
         if (PCLZIP_ERROR_EXTERNAL == 1) {
             return PclErrorCode();
-        } else {
-            return $this->error_code;
         }
+
+        return $this->error_code;
     }
     // --------------------------------------------------------------------------------
 
@@ -1325,9 +1325,9 @@ class PclZip
 
         if ($p_with_code) {
             return ($v_value . ' (' . $this->error_code . ')');
-        } else {
-            return $v_value;
         }
+
+        return $v_value;
     }
     // --------------------------------------------------------------------------------
 
@@ -1344,13 +1344,13 @@ class PclZip
     {
         if (PCLZIP_ERROR_EXTERNAL == 1) {
             return PclErrorString();
-        } else {
-            if ($p_full) {
-                return ($this->errorName(true) . ' : ' . $this->error_string);
-            } else {
-                return ($this->error_string . ' [code ' . $this->error_code . ']');
-            }
         }
+
+        if ($p_full) {
+            return ($this->errorName(true) . ' : ' . $this->error_string);
+        }
+
+        return ($this->error_string . ' [code ' . $this->error_code . ']');
     }
     // --------------------------------------------------------------------------------
 

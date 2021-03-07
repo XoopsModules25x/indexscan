@@ -79,9 +79,9 @@ if (isset($xoopsConfig['startpage']) && $xoopsConfig['startpage'] != '' && $xoop
     $_SERVER['REQUEST_URI'] = substr(XOOPS_URL, strlen($url)) . '/modules/' . $xoopsConfig['startpage'] . '/index.php';
     include $GLOBALS['xoops']->path('modules/' . $xoopsConfig['startpage'] . '/index.php');
     exit();
-} else {
-    $xoopsOption['show_cblock']   = 1;
-    $GLOBALS['xoopsOption']['template_main'] = 'db:system_homepage.tpl';
-    include $GLOBALS['xoops']->path('header.php');
-    include $GLOBALS['xoops']->path('footer.php');
 }
+
+$xoopsOption['show_cblock']              = 1;
+$GLOBALS['xoopsOption']['template_main'] = 'db:system_homepage.tpl';
+include $GLOBALS['xoops']->path('header.php');
+include $GLOBALS['xoops']->path('footer.php');
