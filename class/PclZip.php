@@ -1640,7 +1640,7 @@ class PclZip
                     $v_work_list = [];
                     if (is_string($p_options_list[$i + 1])) {
                         // ----- Remove spaces
-                        $p_options_list[$i + 1] = strtr($p_options_list[$i + 1], ' ', '');
+                        $p_options_list[$i + 1] = str_replace(' ', '', $p_options_list[$i + 1]);
 
                         // ----- Parse items
                         $v_work_list = explode(',', $p_options_list[$i + 1]);
@@ -5566,7 +5566,7 @@ function PclZipUtilTranslateWinPath($p_path, $p_remove_disk_letter = true)
         }
         // ----- Change potential windows directory separator
         if ((strpos($p_path, '\\') > 0) || ('\\' === substr($p_path, 0, 1))) {
-            $p_path = strtr($p_path, '\\', '/');
+            $p_path = str_replace('\\', '/', $p_path);
         }
     }
     return $p_path;
