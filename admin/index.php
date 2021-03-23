@@ -10,21 +10,22 @@
  */
 
 /**
- * @copyright    The XOOPS Project http://sourceforge.net/projects/xoops/
- * @license      GNU GPL 2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
+ * @copyright    XOOPS Project (https://xoops.org)
+ * @license      GNU GPL 2 or later (https://www.gnu.org/licenses/gpl-2.0.html)
  * @package
  * @since
- * @author     XOOPS Development Team
+ * @author       XOOPS Development Team
  */
 
-require_once dirname(dirname(dirname(__DIR__))) . '/include/cp_header.php';
-include_once __DIR__ . '/admin_header.php';
+use Xmf\Module\Admin;
+
+require_once __DIR__ . '/admin_header.php';
 
 xoops_cp_header();
 
-    $indexAdmin = new ModuleAdmin();
+$adminObject = Admin::getInstance();
 
-    echo $indexAdmin->addNavigation(basename(__FILE__));
-    echo $indexAdmin->renderIndex();
+$adminObject->displayNavigation(basename(__FILE__));
+$adminObject->displayIndex();
 
-include __DIR__ . '/admin_footer.php';
+require __DIR__ . '/admin_footer.php';
